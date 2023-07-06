@@ -1,0 +1,3062 @@
+[
+   {
+      "revision": {
+         "version": 0
+      },
+      "position": {
+         "x": -202.375497434316,
+         "y": 1454.7711333543416
+      },
+      "permissions": {
+         "canRead": true,
+         "canWrite": true
+      },
+      "bulletins": [],
+      "component": {
+         "position": {
+            "x": -202.375497434316,
+            "y": 1454.7711333543416
+         },
+         "name": "UpdateAttribute",
+         "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
+         "bundle": {
+            "group": "org.apache.nifi",
+            "artifact": "nifi-update-attribute-nar",
+            "version": "1.9.0"
+         },
+         "state": "STOPPED",
+         "style": {},
+         "supportsParallelProcessing": true,
+         "supportsEventDriven": true,
+         "supportsBatching": true,
+         "persistsState": true,
+         "restricted": false,
+         "deprecated": false,
+         "executionNodeRestricted": false,
+         "multipleVersionsAvailable": false,
+         "inputRequirement": "INPUT_REQUIRED",
+         "config": {
+            "properties": {
+               "Delete Attributes Expression": null,
+               "Store State": "Do not store state",
+               "Stateful Variables Initial Value": null,
+               "canonical-value-lookup-cache-size": "100",
+               "filename": "${uuid}"
+            },
+            "descriptors": {
+               "Delete Attributes Expression": {
+                  "name": "Delete Attributes Expression",
+                  "displayName": "Delete Attributes Expression",
+                  "description": "Regular expression for attributes to be deleted from FlowFiles.  Existing attributes that match will be deleted regardless of whether they are updated by this processor.",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry and FlowFile Attributes"
+               },
+               "Store State": {
+                  "name": "Store State",
+                  "displayName": "Store State",
+                  "description": "Select whether or not state will be stored. Selecting 'Stateless' will offer the default functionality of purely updating the attributes on a FlowFile in a stateless manner. Selecting a stateful option will not only store the attributes on the FlowFile but also in the Processors state. See the 'Stateful Usage' topic of the 'Additional Details' section of this processor's documentation for more information",
+                  "defaultValue": "Do not store state",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "Do not store state",
+                           "value": "Do not store state"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Store state locally",
+                           "value": "Store state locally"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Stateful Variables Initial Value": {
+                  "name": "Stateful Variables Initial Value",
+                  "displayName": "Stateful Variables Initial Value",
+                  "description": "If using state to set/reference variables then this value is used to set the initial value of the stateful variable. This will only be used in the @OnScheduled method when state does not contain a value for the variable. This is required if running statefully but can be empty if needed.",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "canonical-value-lookup-cache-size": {
+                  "name": "canonical-value-lookup-cache-size",
+                  "displayName": "Cache Value Lookup Cache Size",
+                  "description": "Specifies how many canonical lookup values should be stored in the cache",
+                  "defaultValue": "100",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "filename": {
+                  "name": "filename",
+                  "displayName": "filename",
+                  "description": "",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry and FlowFile Attributes"
+               }
+            },
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "comments": "",
+            "customUiUrl": "/nifi-update-attribute-ui-1.9.0/configure",
+            "lossTolerant": false,
+            "defaultConcurrentTasks": {
+               "TIMER_DRIVEN": "1",
+               "EVENT_DRIVEN": "0",
+               "CRON_DRIVEN": "1"
+            },
+            "defaultSchedulingPeriod": {
+               "TIMER_DRIVEN": "0 sec",
+               "CRON_DRIVEN": "* * * * * ?"
+            }
+         },
+         "validationStatus": "VALID",
+         "extensionMissing": false
+      },
+      "inputRequirement": "INPUT_REQUIRED",
+      "status": {
+         "name": "UpdateAttribute",
+         "runStatus": "Stopped",
+         "statsLastRefreshed": "08:24:08 UTC",
+         "aggregateSnapshot": {
+            "name": "UpdateAttribute",
+            "type": "UpdateAttribute",
+            "runStatus": "Stopped",
+            "executionNode": "ALL",
+            "bytesRead": 0,
+            "bytesWritten": 0,
+            "read": "0 bytes",
+            "written": "0 bytes",
+            "flowFilesIn": 0,
+            "bytesIn": 0,
+            "input": "0 (0 bytes)",
+            "flowFilesOut": 0,
+            "bytesOut": 0,
+            "output": "0 (0 bytes)",
+            "taskCount": 0,
+            "tasksDurationNanos": 0,
+            "tasks": "0",
+            "tasksDuration": "00:00:00.000",
+            "activeThreadCount": 0,
+            "terminatedThreadCount": 0
+         }
+      },
+      "operatePermissions": {
+         "canRead": true,
+         "canWrite": true
+      }
+   },
+   {
+      "revision": {
+         "version": 0
+      },
+      "position": {
+         "x": -201.8619221158756,
+         "y": 1680.6206265640146
+      },
+      "permissions": {
+         "canRead": true,
+         "canWrite": true
+      },
+      "bulletins": [],
+      "component": {
+         "position": {
+            "x": -201.8619221158756,
+            "y": 1680.6206265640146
+         },
+         "name": "ExtractEmailHeaders",
+         "type": "org.apache.nifi.processors.email.ExtractEmailHeaders",
+         "bundle": {
+            "group": "org.apache.nifi",
+            "artifact": "nifi-email-nar",
+            "version": "1.9.0"
+         },
+         "state": "STOPPED",
+         "style": {},
+         "supportsParallelProcessing": true,
+         "supportsEventDriven": true,
+         "supportsBatching": true,
+         "persistsState": false,
+         "restricted": false,
+         "deprecated": false,
+         "executionNodeRestricted": false,
+         "multipleVersionsAvailable": false,
+         "inputRequirement": "INPUT_REQUIRED",
+         "config": {
+            "properties": {
+               "CAPTURED_HEADERS": "x-mailer",
+               "STRICT_ADDRESS_PARSING": "true"
+            },
+            "descriptors": {
+               "CAPTURED_HEADERS": {
+                  "name": "CAPTURED_HEADERS",
+                  "displayName": "Additional Header List",
+                  "description": "COLON separated list of additional headers to be extracted from the flowfile content.NOTE the header key is case insensitive and will be matched as lower-case. Values will respect email contents.",
+                  "defaultValue": "x-mailer",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "STRICT_ADDRESS_PARSING": {
+                  "name": "STRICT_ADDRESS_PARSING",
+                  "displayName": "Email Address Parsing",
+                  "description": "If \"strict\", strict address format parsing rules are applied to mailbox and mailbox list fields, such as \"to\" and \"from\" headers, and FlowFiles with poorly formed addresses will be routed to the failure relationship, similar to messages that fail RFC compliant format validation. If \"non-strict\", the processor will extract the contents of mailbox list headers as comma-separated values without attempting to parse each value as well-formed Internet mailbox addresses. This is optional and defaults to Strict Address Parsing",
+                  "defaultValue": "true",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "Strict Address Parsing",
+                           "value": "true",
+                           "description": "Strict email address format will be enforced. FlowFiles will be transfered to the failure relationship if the email address is invalid."
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Non-Strict Address Parsing",
+                           "value": "false",
+                           "description": "Accept emails, even if the address is poorly formed and doesn't strictly comply with RFC Validation."
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               }
+            },
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "comments": "",
+            "lossTolerant": false,
+            "defaultConcurrentTasks": {
+               "TIMER_DRIVEN": "1",
+               "EVENT_DRIVEN": "0",
+               "CRON_DRIVEN": "1"
+            },
+            "defaultSchedulingPeriod": {
+               "TIMER_DRIVEN": "0 sec",
+               "CRON_DRIVEN": "* * * * * ?"
+            }
+         },
+         "validationStatus": "VALID",
+         "extensionMissing": false
+      },
+      "inputRequirement": "INPUT_REQUIRED",
+      "status": {
+         "name": "ExtractEmailHeaders",
+         "runStatus": "Stopped",
+         "statsLastRefreshed": "08:24:08 UTC",
+         "aggregateSnapshot": {
+            "name": "ExtractEmailHeaders",
+            "type": "ExtractEmailHeaders",
+            "runStatus": "Stopped",
+            "executionNode": "ALL",
+            "bytesRead": 0,
+            "bytesWritten": 0,
+            "read": "0 bytes",
+            "written": "0 bytes",
+            "flowFilesIn": 0,
+            "bytesIn": 0,
+            "input": "0 (0 bytes)",
+            "flowFilesOut": 0,
+            "bytesOut": 0,
+            "output": "0 (0 bytes)",
+            "taskCount": 0,
+            "tasksDurationNanos": 0,
+            "tasks": "0",
+            "tasksDuration": "00:00:00.000",
+            "activeThreadCount": 0,
+            "terminatedThreadCount": 0
+         }
+      },
+      "operatePermissions": {
+         "canRead": true,
+         "canWrite": true
+      }
+   },
+   {
+      "revision": {
+         "version": 0
+      },
+      "position": {
+         "x": -1380.1104914588261,
+         "y": 1244.7220805298377
+      },
+      "permissions": {
+         "canRead": true,
+         "canWrite": true
+      },
+      "bulletins": [],
+      "component": {
+         "position": {
+            "x": -1380.1104914588261,
+            "y": 1244.7220805298377
+         },
+         "name": "start mails",
+         "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+         "bundle": {
+            "group": "org.apache.nifi",
+            "artifact": "nifi-standard-nar",
+            "version": "1.9.0"
+         },
+         "state": "STOPPED",
+         "style": {},
+         "supportsParallelProcessing": true,
+         "supportsEventDriven": false,
+         "supportsBatching": true,
+         "persistsState": false,
+         "restricted": false,
+         "deprecated": false,
+         "executionNodeRestricted": false,
+         "multipleVersionsAvailable": false,
+         "inputRequirement": "INPUT_FORBIDDEN",
+         "config": {
+            "properties": {
+               "File Size": "0B",
+               "Batch Size": "1",
+               "Data Format": "Text",
+               "Unique FlowFiles": "false",
+               "generate-ff-custom-text": null,
+               "character-set": "UTF-8"
+            },
+            "descriptors": {
+               "File Size": {
+                  "name": "File Size",
+                  "displayName": "File Size",
+                  "description": "The size of the file that will be used",
+                  "defaultValue": "0B",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Batch Size": {
+                  "name": "Batch Size",
+                  "displayName": "Batch Size",
+                  "description": "The number of FlowFiles to be transferred in each invocation",
+                  "defaultValue": "1",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Data Format": {
+                  "name": "Data Format",
+                  "displayName": "Data Format",
+                  "description": "Specifies whether the data should be Text or Binary",
+                  "defaultValue": "Text",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "Binary",
+                           "value": "Binary"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Text",
+                           "value": "Text"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Unique FlowFiles": {
+                  "name": "Unique FlowFiles",
+                  "displayName": "Unique FlowFiles",
+                  "description": "If true, each FlowFile that is generated will be unique. If false, a random value will be generated and all FlowFiles will get the same content but this offers much higher throughput",
+                  "defaultValue": "false",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "true",
+                           "value": "true"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "false",
+                           "value": "false"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "generate-ff-custom-text": {
+                  "name": "generate-ff-custom-text",
+                  "displayName": "Custom Text",
+                  "description": "If Data Format is text and if Unique FlowFiles is false, then this custom text will be used as content of the generated FlowFiles and the File Size will be ignored. Finally, if Expression Language is used, evaluation will be performed only once per batch of generated FlowFiles",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry Only"
+               },
+               "character-set": {
+                  "name": "character-set",
+                  "displayName": "Character Set",
+                  "description": "Specifies the character set to use when writing the bytes of Custom Text to a flow file.",
+                  "defaultValue": "UTF-8",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               }
+            },
+            "schedulingPeriod": "30 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "comments": "",
+            "lossTolerant": false,
+            "defaultConcurrentTasks": {
+               "TIMER_DRIVEN": "1",
+               "EVENT_DRIVEN": "0",
+               "CRON_DRIVEN": "1"
+            },
+            "defaultSchedulingPeriod": {
+               "TIMER_DRIVEN": "0 sec",
+               "CRON_DRIVEN": "* * * * * ?"
+            }
+         },
+         "validationStatus": "VALID",
+         "extensionMissing": false
+      },
+      "inputRequirement": "INPUT_FORBIDDEN",
+      "status": {
+         "name": "start mails",
+         "runStatus": "Stopped",
+         "statsLastRefreshed": "08:24:08 UTC",
+         "aggregateSnapshot": {
+            "name": "start mails",
+            "type": "GenerateFlowFile",
+            "runStatus": "Stopped",
+            "executionNode": "ALL",
+            "bytesRead": 0,
+            "bytesWritten": 0,
+            "read": "0 bytes",
+            "written": "0 bytes",
+            "flowFilesIn": 0,
+            "bytesIn": 0,
+            "input": "0 (0 bytes)",
+            "flowFilesOut": 0,
+            "bytesOut": 0,
+            "output": "0 (0 bytes)",
+            "taskCount": 0,
+            "tasksDurationNanos": 0,
+            "tasks": "0",
+            "tasksDuration": "00:00:00.000",
+            "activeThreadCount": 0,
+            "terminatedThreadCount": 0
+         }
+      },
+      "operatePermissions": {
+         "canRead": true,
+         "canWrite": true
+      }
+   },
+   {
+      "revision": {
+         "version": 0
+      },
+      "position": {
+         "x": -664.912690538571,
+         "y": 1243.9947778950673
+      },
+      "permissions": {
+         "canRead": true,
+         "canWrite": true
+      },
+      "bulletins": [],
+      "component": {
+         "position": {
+            "x": -664.912690538571,
+            "y": 1243.9947778950673
+         },
+         "name": "Ingest Emails",
+         "type": "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+         "bundle": {
+            "group": "org.apache.nifi",
+            "artifact": "nifi-standard-nar",
+            "version": "1.9.0"
+         },
+         "state": "STOPPED",
+         "style": {},
+         "supportsParallelProcessing": true,
+         "supportsEventDriven": true,
+         "supportsBatching": true,
+         "persistsState": false,
+         "restricted": true,
+         "deprecated": false,
+         "executionNodeRestricted": false,
+         "multipleVersionsAvailable": false,
+         "inputRequirement": "INPUT_REQUIRED",
+         "config": {
+            "properties": {
+               "Command Arguments": "/tmp/scripts/ingest_emails.py",
+               "Command Path": "/usr/bin/python3",
+               "Ignore STDIN": "true",
+               "Working Directory": "/tmp/mails/",
+               "Argument Delimiter": ";",
+               "Output Destination Attribute": null,
+               "Max Attribute Length": "256"
+            },
+            "descriptors": {
+               "Command Arguments": {
+                  "name": "Command Arguments",
+                  "displayName": "Command Arguments",
+                  "description": "The arguments to supply to the executable delimited by the ';' character.",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry and FlowFile Attributes"
+               },
+               "Command Path": {
+                  "name": "Command Path",
+                  "displayName": "Command Path",
+                  "description": "Specifies the command to be executed; if just the name of an executable is provided, it must be in the user's environment PATH.",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry and FlowFile Attributes"
+               },
+               "Ignore STDIN": {
+                  "name": "Ignore STDIN",
+                  "displayName": "Ignore STDIN",
+                  "description": "If true, the contents of the incoming flowfile will not be passed to the executing command",
+                  "defaultValue": "false",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "true",
+                           "value": "true"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "false",
+                           "value": "false"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Working Directory": {
+                  "name": "Working Directory",
+                  "displayName": "Working Directory",
+                  "description": "The directory to use as the current working directory when executing the command",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry and FlowFile Attributes"
+               },
+               "Argument Delimiter": {
+                  "name": "Argument Delimiter",
+                  "displayName": "Argument Delimiter",
+                  "description": "Delimiter to use to separate arguments for a command [default: ;]. Must be a single character",
+                  "defaultValue": ";",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Output Destination Attribute": {
+                  "name": "Output Destination Attribute",
+                  "displayName": "Output Destination Attribute",
+                  "description": "If set, the output of the stream command will be put into an attribute of the original FlowFile instead of a separate FlowFile. There will no longer be a relationship for 'output stream' or 'nonzero status'. The value of this property will be the key for the output attribute.",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Max Attribute Length": {
+                  "name": "Max Attribute Length",
+                  "displayName": "Max Attribute Length",
+                  "description": "If routing the output of the stream command to an attribute, the number of characters put to the attribute value will be at most this amount. This is important because attributes are held in memory and large attributes will quickly cause out of memory issues. If the output goes longer than this value, it will truncated to fit. Consider making this smaller if able.",
+                  "defaultValue": "256",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               }
+            },
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "comments": "",
+            "lossTolerant": false,
+            "defaultConcurrentTasks": {
+               "TIMER_DRIVEN": "1",
+               "EVENT_DRIVEN": "0",
+               "CRON_DRIVEN": "1"
+            },
+            "defaultSchedulingPeriod": {
+               "TIMER_DRIVEN": "0 sec",
+               "CRON_DRIVEN": "* * * * * ?"
+            }
+         },
+         "validationStatus": "VALID",
+         "extensionMissing": false
+      },
+      "inputRequirement": "INPUT_REQUIRED",
+      "status": {
+         "name": "Ingest Emails",
+         "runStatus": "Stopped",
+         "statsLastRefreshed": "08:24:08 UTC",
+         "aggregateSnapshot": {
+            "name": "Ingest Emails",
+            "type": "ExecuteStreamCommand",
+            "runStatus": "Stopped",
+            "executionNode": "ALL",
+            "bytesRead": 0,
+            "bytesWritten": 0,
+            "read": "0 bytes",
+            "written": "0 bytes",
+            "flowFilesIn": 0,
+            "bytesIn": 0,
+            "input": "0 (0 bytes)",
+            "flowFilesOut": 0,
+            "bytesOut": 0,
+            "output": "0 (0 bytes)",
+            "taskCount": 0,
+            "tasksDurationNanos": 0,
+            "tasks": "0",
+            "tasksDuration": "00:00:00.000",
+            "activeThreadCount": 0,
+            "terminatedThreadCount": 0
+         }
+      },
+      "operatePermissions": {
+         "canRead": true,
+         "canWrite": true
+      }
+   },
+   {
+      "revision": {
+         "clientId": "102614bd-1810-1b05-2c30-659f4e596177",
+         "version": 1
+      },
+      "position": {
+         "x": -204.79713592308553,
+         "y": 1899.798843315279
+      },
+      "permissions": {
+         "canRead": true,
+         "canWrite": true
+      },
+      "bulletins": [],
+      "component": {
+         "position": {
+            "x": -204.79713592308553,
+            "y": 1899.798843315279
+         },
+         "name": "Sender-Name and Sender-Address",
+         "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
+         "bundle": {
+            "group": "org.apache.nifi",
+            "artifact": "nifi-update-attribute-nar",
+            "version": "1.9.0"
+         },
+         "state": "STOPPED",
+         "style": {},
+         "supportsParallelProcessing": true,
+         "supportsEventDriven": true,
+         "supportsBatching": true,
+         "persistsState": true,
+         "restricted": false,
+         "deprecated": false,
+         "executionNodeRestricted": false,
+         "multipleVersionsAvailable": false,
+         "inputRequirement": "INPUT_REQUIRED",
+         "config": {
+            "properties": {
+               "Delete Attributes Expression": null,
+               "Store State": "Do not store state",
+               "Stateful Variables Initial Value": null,
+               "canonical-value-lookup-cache-size": "100",
+               "email_sender_address": "${email.headers.from.0:substringAfterLast('<'):substringBeforeLast('>')}",
+               "email_sender_name": "${email.headers.from.0:substringBeforeLast(' <')}"
+            },
+            "descriptors": {
+               "Delete Attributes Expression": {
+                  "name": "Delete Attributes Expression",
+                  "displayName": "Delete Attributes Expression",
+                  "description": "Regular expression for attributes to be deleted from FlowFiles.  Existing attributes that match will be deleted regardless of whether they are updated by this processor.",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry and FlowFile Attributes"
+               },
+               "Store State": {
+                  "name": "Store State",
+                  "displayName": "Store State",
+                  "description": "Select whether or not state will be stored. Selecting 'Stateless' will offer the default functionality of purely updating the attributes on a FlowFile in a stateless manner. Selecting a stateful option will not only store the attributes on the FlowFile but also in the Processors state. See the 'Stateful Usage' topic of the 'Additional Details' section of this processor's documentation for more information",
+                  "defaultValue": "Do not store state",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "Do not store state",
+                           "value": "Do not store state"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Store state locally",
+                           "value": "Store state locally"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Stateful Variables Initial Value": {
+                  "name": "Stateful Variables Initial Value",
+                  "displayName": "Stateful Variables Initial Value",
+                  "description": "If using state to set/reference variables then this value is used to set the initial value of the stateful variable. This will only be used in the @OnScheduled method when state does not contain a value for the variable. This is required if running statefully but can be empty if needed.",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "canonical-value-lookup-cache-size": {
+                  "name": "canonical-value-lookup-cache-size",
+                  "displayName": "Cache Value Lookup Cache Size",
+                  "description": "Specifies how many canonical lookup values should be stored in the cache",
+                  "defaultValue": "100",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "email_sender_address": {
+                  "name": "email_sender_address",
+                  "displayName": "email_sender_address",
+                  "description": "",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry and FlowFile Attributes"
+               },
+               "email_sender_name": {
+                  "name": "email_sender_name",
+                  "displayName": "email_sender_name",
+                  "description": "",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry and FlowFile Attributes"
+               }
+            },
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "comments": "",
+            "customUiUrl": "/nifi-update-attribute-ui-1.9.0/configure",
+            "lossTolerant": false,
+            "defaultConcurrentTasks": {
+               "TIMER_DRIVEN": "1",
+               "EVENT_DRIVEN": "0",
+               "CRON_DRIVEN": "1"
+            },
+            "defaultSchedulingPeriod": {
+               "TIMER_DRIVEN": "0 sec",
+               "CRON_DRIVEN": "* * * * * ?"
+            }
+         },
+         "validationStatus": "VALID",
+         "extensionMissing": false
+      },
+      "inputRequirement": "INPUT_REQUIRED",
+      "status": {
+         "name": "Sender-Name and Sender-Address",
+         "runStatus": "Stopped",
+         "statsLastRefreshed": "08:24:08 UTC",
+         "aggregateSnapshot": {
+            "name": "Sender-Name and Sender-Address",
+            "type": "UpdateAttribute",
+            "runStatus": "Stopped",
+            "executionNode": "ALL",
+            "bytesRead": 0,
+            "bytesWritten": 0,
+            "read": "0 bytes",
+            "written": "0 bytes",
+            "flowFilesIn": 0,
+            "bytesIn": 0,
+            "input": "0 (0 bytes)",
+            "flowFilesOut": 0,
+            "bytesOut": 0,
+            "output": "0 (0 bytes)",
+            "taskCount": 0,
+            "tasksDurationNanos": 0,
+            "tasks": "0",
+            "tasksDuration": "00:00:00.000",
+            "activeThreadCount": 0,
+            "terminatedThreadCount": 0
+         }
+      },
+      "operatePermissions": {
+         "canRead": true,
+         "canWrite": true
+      }
+   },
+   {
+      "revision": {
+         "version": 0
+      },
+      "position": {
+         "x": -207.05947470233195,
+         "y": 1232.284994693617
+      },
+      "permissions": {
+         "canRead": true,
+         "canWrite": true
+      },
+      "bulletins": [],
+      "component": {
+         "position": {
+            "x": -207.05947470233195,
+            "y": 1232.284994693617
+         },
+         "name": "GetFile",
+         "type": "org.apache.nifi.processors.standard.GetFile",
+         "bundle": {
+            "group": "org.apache.nifi",
+            "artifact": "nifi-standard-nar",
+            "version": "1.9.0"
+         },
+         "state": "STOPPED",
+         "style": {},
+         "supportsParallelProcessing": true,
+         "supportsEventDriven": false,
+         "supportsBatching": false,
+         "persistsState": false,
+         "restricted": true,
+         "deprecated": false,
+         "executionNodeRestricted": false,
+         "multipleVersionsAvailable": false,
+         "inputRequirement": "INPUT_FORBIDDEN",
+         "config": {
+            "properties": {
+               "Input Directory": "/tmp/mails/",
+               "File Filter": "[^\\.].*",
+               "Path Filter": null,
+               "Batch Size": "10",
+               "Keep Source File": "false",
+               "Recurse Subdirectories": "true",
+               "Polling Interval": "20 sec",
+               "Ignore Hidden Files": "true",
+               "Minimum File Age": "0 sec",
+               "Maximum File Age": null,
+               "Minimum File Size": "0 B",
+               "Maximum File Size": null
+            },
+            "descriptors": {
+               "Input Directory": {
+                  "name": "Input Directory",
+                  "displayName": "Input Directory",
+                  "description": "The input directory from which to pull files",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry Only"
+               },
+               "File Filter": {
+                  "name": "File Filter",
+                  "displayName": "File Filter",
+                  "description": "Only files whose names match the given regular expression will be picked up",
+                  "defaultValue": "[^\\.].*",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Path Filter": {
+                  "name": "Path Filter",
+                  "displayName": "Path Filter",
+                  "description": "When Recurse Subdirectories is true, then only subdirectories whose path matches the given regular expression will be scanned",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Batch Size": {
+                  "name": "Batch Size",
+                  "displayName": "Batch Size",
+                  "description": "The maximum number of files to pull in each iteration",
+                  "defaultValue": "10",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Keep Source File": {
+                  "name": "Keep Source File",
+                  "displayName": "Keep Source File",
+                  "description": "If true, the file is not deleted after it has been copied to the Content Repository; this causes the file to be picked up continually and is useful for testing purposes.  If not keeping original NiFi will need write permissions on the directory it is pulling from otherwise it will ignore the file.",
+                  "defaultValue": "false",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "true",
+                           "value": "true"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "false",
+                           "value": "false"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Recurse Subdirectories": {
+                  "name": "Recurse Subdirectories",
+                  "displayName": "Recurse Subdirectories",
+                  "description": "Indicates whether or not to pull files from subdirectories",
+                  "defaultValue": "true",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "true",
+                           "value": "true"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "false",
+                           "value": "false"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Polling Interval": {
+                  "name": "Polling Interval",
+                  "displayName": "Polling Interval",
+                  "description": "Indicates how long to wait before performing a directory listing",
+                  "defaultValue": "0 sec",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Ignore Hidden Files": {
+                  "name": "Ignore Hidden Files",
+                  "displayName": "Ignore Hidden Files",
+                  "description": "Indicates whether or not hidden files should be ignored",
+                  "defaultValue": "true",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "true",
+                           "value": "true"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "false",
+                           "value": "false"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Minimum File Age": {
+                  "name": "Minimum File Age",
+                  "displayName": "Minimum File Age",
+                  "description": "The minimum age that a file must be in order to be pulled; any file younger than this amount of time (according to last modification date) will be ignored",
+                  "defaultValue": "0 sec",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Maximum File Age": {
+                  "name": "Maximum File Age",
+                  "displayName": "Maximum File Age",
+                  "description": "The maximum age that a file must be in order to be pulled; any file older than this amount of time (according to last modification date) will be ignored",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Minimum File Size": {
+                  "name": "Minimum File Size",
+                  "displayName": "Minimum File Size",
+                  "description": "The minimum size that a file must be in order to be pulled",
+                  "defaultValue": "0 B",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Maximum File Size": {
+                  "name": "Maximum File Size",
+                  "displayName": "Maximum File Size",
+                  "description": "The maximum size that a file can be in order to be pulled",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               }
+            },
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "comments": "",
+            "lossTolerant": false,
+            "defaultConcurrentTasks": {
+               "TIMER_DRIVEN": "1",
+               "EVENT_DRIVEN": "0",
+               "CRON_DRIVEN": "1"
+            },
+            "defaultSchedulingPeriod": {
+               "TIMER_DRIVEN": "0 sec",
+               "CRON_DRIVEN": "* * * * * ?"
+            }
+         },
+         "validationStatus": "VALID",
+         "extensionMissing": false
+      },
+      "inputRequirement": "INPUT_FORBIDDEN",
+      "status": {
+         "name": "GetFile",
+         "runStatus": "Stopped",
+         "statsLastRefreshed": "08:24:08 UTC",
+         "aggregateSnapshot": {
+            "name": "GetFile",
+            "type": "GetFile",
+            "runStatus": "Stopped",
+            "executionNode": "ALL",
+            "bytesRead": 0,
+            "bytesWritten": 0,
+            "read": "0 bytes",
+            "written": "0 bytes",
+            "flowFilesIn": 0,
+            "bytesIn": 0,
+            "input": "0 (0 bytes)",
+            "flowFilesOut": 0,
+            "bytesOut": 0,
+            "output": "0 (0 bytes)",
+            "taskCount": 0,
+            "tasksDurationNanos": 0,
+            "tasks": "0",
+            "tasksDuration": "00:00:00.000",
+            "activeThreadCount": 0,
+            "terminatedThreadCount": 0
+         }
+      },
+      "operatePermissions": {
+         "canRead": true,
+         "canWrite": true
+      }
+   },
+   {
+      "revision": {
+         "version": 0
+      },
+      "position": {
+         "x": -202.7277599643844,
+         "y": 2142.990380496757
+      },
+      "permissions": {
+         "canRead": true,
+         "canWrite": true
+      },
+      "bulletins": [],
+      "component": {
+         "position": {
+            "x": -202.7277599643844,
+            "y": 2142.990380496757
+         },
+         "name": "ExtractEmailAttachments",
+         "type": "org.apache.nifi.processors.email.ExtractEmailAttachments",
+         "bundle": {
+            "group": "org.apache.nifi",
+            "artifact": "nifi-email-nar",
+            "version": "1.9.0"
+         },
+         "state": "STOPPED",
+         "style": {},
+         "supportsParallelProcessing": true,
+         "supportsEventDriven": true,
+         "supportsBatching": true,
+         "persistsState": false,
+         "restricted": false,
+         "deprecated": false,
+         "executionNodeRestricted": false,
+         "multipleVersionsAvailable": false,
+         "inputRequirement": "INPUT_REQUIRED",
+         "config": {
+            "properties": {},
+            "descriptors": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "comments": "",
+            "lossTolerant": false,
+            "defaultConcurrentTasks": {
+               "TIMER_DRIVEN": "1",
+               "EVENT_DRIVEN": "0",
+               "CRON_DRIVEN": "1"
+            },
+            "defaultSchedulingPeriod": {
+               "TIMER_DRIVEN": "0 sec",
+               "CRON_DRIVEN": "* * * * * ?"
+            }
+         },
+         "validationStatus": "VALID",
+         "extensionMissing": false
+      },
+      "inputRequirement": "INPUT_REQUIRED",
+      "status": {
+         "name": "ExtractEmailAttachments",
+         "runStatus": "Stopped",
+         "statsLastRefreshed": "08:24:08 UTC",
+         "aggregateSnapshot": {
+            "name": "ExtractEmailAttachments",
+            "type": "ExtractEmailAttachments",
+            "runStatus": "Stopped",
+            "executionNode": "ALL",
+            "bytesRead": 0,
+            "bytesWritten": 0,
+            "read": "0 bytes",
+            "written": "0 bytes",
+            "flowFilesIn": 0,
+            "bytesIn": 0,
+            "input": "0 (0 bytes)",
+            "flowFilesOut": 0,
+            "bytesOut": 0,
+            "output": "0 (0 bytes)",
+            "taskCount": 0,
+            "tasksDurationNanos": 0,
+            "tasks": "0",
+            "tasksDuration": "00:00:00.000",
+            "activeThreadCount": 0,
+            "terminatedThreadCount": 0
+         }
+      },
+      "operatePermissions": {
+         "canRead": true,
+         "canWrite": true
+      }
+   },
+   {
+      "revision": {
+         "version": 0
+      },
+      "position": {
+         "x": -199.09113196008207,
+         "y": 2378.709137220265
+      },
+      "permissions": {
+         "canRead": true,
+         "canWrite": true
+      },
+      "bulletins": [],
+      "component": {
+         "position": {
+            "x": -199.09113196008207,
+            "y": 2378.709137220265
+         },
+         "name": "Attachment is PDF?",
+         "type": "org.apache.nifi.processors.standard.RouteOnAttribute",
+         "bundle": {
+            "group": "org.apache.nifi",
+            "artifact": "nifi-standard-nar",
+            "version": "1.9.0"
+         },
+         "state": "STOPPED",
+         "style": {},
+         "supportsParallelProcessing": true,
+         "supportsEventDriven": true,
+         "supportsBatching": true,
+         "persistsState": false,
+         "restricted": false,
+         "deprecated": false,
+         "executionNodeRestricted": false,
+         "multipleVersionsAvailable": false,
+         "inputRequirement": "INPUT_REQUIRED",
+         "config": {
+            "properties": {
+               "Routing Strategy": "Route to 'match' if all match",
+               "suffix": "${filename:toUpper():endsWith('PDF')}"
+            },
+            "descriptors": {
+               "Routing Strategy": {
+                  "name": "Routing Strategy",
+                  "displayName": "Routing Strategy",
+                  "description": "Specifies how to determine which relationship to use when evaluating the Expression Language",
+                  "defaultValue": "Route to Property name",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "Route to Property name",
+                           "value": "Route to Property name",
+                           "description": "A copy of the FlowFile will be routed to each relationship whose corresponding expression evaluates to 'true'"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Route to 'matched' if all match",
+                           "value": "Route to 'match' if all match",
+                           "description": "Requires that all user-defined expressions evaluate to 'true' for the FlowFile to be considered a match"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Route to 'matched' if any matches",
+                           "value": "Route to 'match' if any matches",
+                           "description": "Requires that at least one user-defined expression evaluate to 'true' for the FlowFile to be considered a match"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "suffix": {
+                  "name": "suffix",
+                  "displayName": "suffix",
+                  "description": "",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry and FlowFile Attributes"
+               }
+            },
+            "schedulingPeriod": "5 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "comments": "",
+            "lossTolerant": false,
+            "defaultConcurrentTasks": {
+               "TIMER_DRIVEN": "1",
+               "EVENT_DRIVEN": "0",
+               "CRON_DRIVEN": "1"
+            },
+            "defaultSchedulingPeriod": {
+               "TIMER_DRIVEN": "0 sec",
+               "CRON_DRIVEN": "* * * * * ?"
+            }
+         },
+         "validationStatus": "VALID",
+         "extensionMissing": false
+      },
+      "inputRequirement": "INPUT_REQUIRED",
+      "status": {
+         "name": "Attachment is PDF?",
+         "runStatus": "Stopped",
+         "statsLastRefreshed": "08:24:08 UTC",
+         "aggregateSnapshot": {
+            "name": "Attachment is PDF?",
+            "type": "RouteOnAttribute",
+            "runStatus": "Stopped",
+            "executionNode": "ALL",
+            "bytesRead": 0,
+            "bytesWritten": 0,
+            "read": "0 bytes",
+            "written": "0 bytes",
+            "flowFilesIn": 0,
+            "bytesIn": 0,
+            "input": "0 (0 bytes)",
+            "flowFilesOut": 0,
+            "bytesOut": 0,
+            "output": "0 (0 bytes)",
+            "taskCount": 0,
+            "tasksDurationNanos": 0,
+            "tasks": "0",
+            "tasksDuration": "00:00:00.000",
+            "activeThreadCount": 0,
+            "terminatedThreadCount": 0
+         }
+      },
+      "operatePermissions": {
+         "canRead": true,
+         "canWrite": true
+      }
+   },
+   {
+      "revision": {
+         "version": 0
+      },
+      "position": {
+         "x": -249.7675313176444,
+         "y": 1189.6382634490726
+      },
+      "permissions": {
+         "canRead": true,
+         "canWrite": true
+      },
+      "bulletins": [],
+      "component": {
+         "position": {
+            "x": -249.7675313176444,
+            "y": 1189.6382634490726
+         },
+         "name": "GetSQS",
+         "type": "org.apache.nifi.processors.aws.sqs.GetSQS",
+         "bundle": {
+            "group": "org.apache.nifi",
+            "artifact": "nifi-aws-nar",
+            "version": "1.9.0"
+         },
+         "state": "STOPPED",
+         "style": {},
+         "supportsParallelProcessing": true,
+         "supportsEventDriven": false,
+         "supportsBatching": true,
+         "persistsState": false,
+         "restricted": false,
+         "deprecated": false,
+         "executionNodeRestricted": false,
+         "multipleVersionsAvailable": false,
+         "inputRequirement": "INPUT_FORBIDDEN",
+         "config": {
+            "properties": {
+               "Queue URL": null,
+               "Auto Delete Messages": "true",
+               "Access Key": null,
+               "Secret Key": null,
+               "Credentials File": null,
+               "AWS Credentials Provider service": null,
+               "Region": "us-west-2",
+               "Batch Size": "10",
+               "Communications Timeout": "30 secs",
+               "Endpoint Override URL": null,
+               "Character Set": "UTF-8",
+               "Visibility Timeout": "15 mins",
+               "Receive Message Wait Time": "0 sec",
+               "Proxy Host": null,
+               "Proxy Host Port": null
+            },
+            "descriptors": {
+               "Queue URL": {
+                  "name": "Queue URL",
+                  "displayName": "Queue URL",
+                  "description": "The URL of the queue to act upon",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry Only"
+               },
+               "Auto Delete Messages": {
+                  "name": "Auto Delete Messages",
+                  "displayName": "Auto Delete Messages",
+                  "description": "Specifies whether the messages should be automatically deleted by the processors once they have been received.",
+                  "defaultValue": "true",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "true",
+                           "value": "true"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "false",
+                           "value": "false"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Access Key": {
+                  "name": "Access Key",
+                  "displayName": "Access Key ID",
+                  "description": "",
+                  "required": false,
+                  "sensitive": true,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry Only"
+               },
+               "Secret Key": {
+                  "name": "Secret Key",
+                  "displayName": "Secret Access Key",
+                  "description": "",
+                  "required": false,
+                  "sensitive": true,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry Only"
+               },
+               "Credentials File": {
+                  "name": "Credentials File",
+                  "displayName": "Credentials File",
+                  "description": "Path to a file containing AWS access key and secret key in properties file format.",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "AWS Credentials Provider service": {
+                  "name": "AWS Credentials Provider service",
+                  "displayName": "AWS Credentials Provider service",
+                  "description": "The Controller Service that is used to obtain aws credentials provider",
+                  "allowableValues": [],
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported",
+                  "identifiesControllerService": "org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderService",
+                  "identifiesControllerServiceBundle": {
+                     "group": "org.apache.nifi",
+                     "artifact": "nifi-aws-service-api-nar",
+                     "version": "1.9.0"
+                  }
+               },
+               "Region": {
+                  "name": "Region",
+                  "displayName": "Region",
+                  "description": "",
+                  "defaultValue": "us-west-2",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "AWS GovCloud (US)",
+                           "value": "us-gov-west-1",
+                           "description": "AWS Region Code : us-gov-west-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "AWS GovCloud (US-East)",
+                           "value": "us-gov-east-1",
+                           "description": "AWS Region Code : us-gov-east-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "US East (N. Virginia)",
+                           "value": "us-east-1",
+                           "description": "AWS Region Code : us-east-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "US East (Ohio)",
+                           "value": "us-east-2",
+                           "description": "AWS Region Code : us-east-2"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "US West (N. California)",
+                           "value": "us-west-1",
+                           "description": "AWS Region Code : us-west-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "US West (Oregon)",
+                           "value": "us-west-2",
+                           "description": "AWS Region Code : us-west-2"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "EU (Ireland)",
+                           "value": "eu-west-1",
+                           "description": "AWS Region Code : eu-west-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "EU (London)",
+                           "value": "eu-west-2",
+                           "description": "AWS Region Code : eu-west-2"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "EU (Paris)",
+                           "value": "eu-west-3",
+                           "description": "AWS Region Code : eu-west-3"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "EU (Frankfurt)",
+                           "value": "eu-central-1",
+                           "description": "AWS Region Code : eu-central-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Asia Pacific (Mumbai)",
+                           "value": "ap-south-1",
+                           "description": "AWS Region Code : ap-south-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Asia Pacific (Singapore)",
+                           "value": "ap-southeast-1",
+                           "description": "AWS Region Code : ap-southeast-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Asia Pacific (Sydney)",
+                           "value": "ap-southeast-2",
+                           "description": "AWS Region Code : ap-southeast-2"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Asia Pacific (Tokyo)",
+                           "value": "ap-northeast-1",
+                           "description": "AWS Region Code : ap-northeast-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Asia Pacific (Seoul)",
+                           "value": "ap-northeast-2",
+                           "description": "AWS Region Code : ap-northeast-2"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "South America (Sao Paulo)",
+                           "value": "sa-east-1",
+                           "description": "AWS Region Code : sa-east-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "China (Beijing)",
+                           "value": "cn-north-1",
+                           "description": "AWS Region Code : cn-north-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "China (Ningxia)",
+                           "value": "cn-northwest-1",
+                           "description": "AWS Region Code : cn-northwest-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Canada (Central)",
+                           "value": "ca-central-1",
+                           "description": "AWS Region Code : ca-central-1"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Batch Size": {
+                  "name": "Batch Size",
+                  "displayName": "Batch Size",
+                  "description": "The maximum number of messages to send in a single network request",
+                  "defaultValue": "10",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Communications Timeout": {
+                  "name": "Communications Timeout",
+                  "displayName": "Communications Timeout",
+                  "description": "",
+                  "defaultValue": "30 secs",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Endpoint Override URL": {
+                  "name": "Endpoint Override URL",
+                  "displayName": "Endpoint Override URL",
+                  "description": "Endpoint URL to use instead of the AWS default including scheme, host, port, and path. The AWS libraries select an endpoint URL based on the AWS region, but this property overrides the selected endpoint URL, allowing use with other S3-compatible endpoints.",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry Only"
+               },
+               "Character Set": {
+                  "name": "Character Set",
+                  "displayName": "Character Set",
+                  "description": "The Character Set that should be used to encode the textual content of the SQS message",
+                  "defaultValue": "UTF-8",
+                  "allowableValues": [
+                     {
+                        "allowableValue": {
+                           "displayName": "Big5",
+                           "value": "Big5"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Big5-HKSCS",
+                           "value": "Big5-HKSCS"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "CESU-8",
+                           "value": "CESU-8"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "EUC-JP",
+                           "value": "EUC-JP"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "EUC-KR",
+                           "value": "EUC-KR"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "GB18030",
+                           "value": "GB18030"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "GB2312",
+                           "value": "GB2312"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "GBK",
+                           "value": "GBK"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM-Thai",
+                           "value": "IBM-Thai"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM00858",
+                           "value": "IBM00858"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM01140",
+                           "value": "IBM01140"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM01141",
+                           "value": "IBM01141"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM01142",
+                           "value": "IBM01142"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM01143",
+                           "value": "IBM01143"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM01144",
+                           "value": "IBM01144"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM01145",
+                           "value": "IBM01145"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM01146",
+                           "value": "IBM01146"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM01147",
+                           "value": "IBM01147"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM01148",
+                           "value": "IBM01148"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM01149",
+                           "value": "IBM01149"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM037",
+                           "value": "IBM037"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM1026",
+                           "value": "IBM1026"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM1047",
+                           "value": "IBM1047"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM273",
+                           "value": "IBM273"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM277",
+                           "value": "IBM277"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM278",
+                           "value": "IBM278"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM280",
+                           "value": "IBM280"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM284",
+                           "value": "IBM284"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM285",
+                           "value": "IBM285"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM290",
+                           "value": "IBM290"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM297",
+                           "value": "IBM297"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM420",
+                           "value": "IBM420"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM424",
+                           "value": "IBM424"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM437",
+                           "value": "IBM437"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM500",
+                           "value": "IBM500"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM775",
+                           "value": "IBM775"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM850",
+                           "value": "IBM850"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM852",
+                           "value": "IBM852"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM855",
+                           "value": "IBM855"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM857",
+                           "value": "IBM857"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM860",
+                           "value": "IBM860"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM861",
+                           "value": "IBM861"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM862",
+                           "value": "IBM862"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM863",
+                           "value": "IBM863"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM864",
+                           "value": "IBM864"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM865",
+                           "value": "IBM865"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM866",
+                           "value": "IBM866"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM868",
+                           "value": "IBM868"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM869",
+                           "value": "IBM869"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM870",
+                           "value": "IBM870"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM871",
+                           "value": "IBM871"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "IBM918",
+                           "value": "IBM918"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-2022-CN",
+                           "value": "ISO-2022-CN"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-2022-JP",
+                           "value": "ISO-2022-JP"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-2022-JP-2",
+                           "value": "ISO-2022-JP-2"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-2022-KR",
+                           "value": "ISO-2022-KR"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-8859-1",
+                           "value": "ISO-8859-1"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-8859-13",
+                           "value": "ISO-8859-13"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-8859-15",
+                           "value": "ISO-8859-15"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-8859-2",
+                           "value": "ISO-8859-2"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-8859-3",
+                           "value": "ISO-8859-3"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-8859-4",
+                           "value": "ISO-8859-4"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-8859-5",
+                           "value": "ISO-8859-5"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-8859-6",
+                           "value": "ISO-8859-6"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-8859-7",
+                           "value": "ISO-8859-7"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-8859-8",
+                           "value": "ISO-8859-8"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "ISO-8859-9",
+                           "value": "ISO-8859-9"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "JIS_X0201",
+                           "value": "JIS_X0201"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "JIS_X0212-1990",
+                           "value": "JIS_X0212-1990"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "KOI8-R",
+                           "value": "KOI8-R"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "KOI8-U",
+                           "value": "KOI8-U"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "Shift_JIS",
+                           "value": "Shift_JIS"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "TIS-620",
+                           "value": "TIS-620"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "US-ASCII",
+                           "value": "US-ASCII"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "UTF-16",
+                           "value": "UTF-16"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "UTF-16BE",
+                           "value": "UTF-16BE"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "UTF-16LE",
+                           "value": "UTF-16LE"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "UTF-32",
+                           "value": "UTF-32"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "UTF-32BE",
+                           "value": "UTF-32BE"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "UTF-32LE",
+                           "value": "UTF-32LE"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "UTF-8",
+                           "value": "UTF-8"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "windows-1250",
+                           "value": "windows-1250"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "windows-1251",
+                           "value": "windows-1251"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "windows-1252",
+                           "value": "windows-1252"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "windows-1253",
+                           "value": "windows-1253"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "windows-1254",
+                           "value": "windows-1254"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "windows-1255",
+                           "value": "windows-1255"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "windows-1256",
+                           "value": "windows-1256"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "windows-1257",
+                           "value": "windows-1257"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "windows-1258",
+                           "value": "windows-1258"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "windows-31j",
+                           "value": "windows-31j"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-Big5-HKSCS-2001",
+                           "value": "x-Big5-HKSCS-2001"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-Big5-Solaris",
+                           "value": "x-Big5-Solaris"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-COMPOUND_TEXT",
+                           "value": "x-COMPOUND_TEXT"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-euc-jp-linux",
+                           "value": "x-euc-jp-linux"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-EUC-TW",
+                           "value": "x-EUC-TW"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-eucJP-Open",
+                           "value": "x-eucJP-Open"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1006",
+                           "value": "x-IBM1006"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1025",
+                           "value": "x-IBM1025"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1046",
+                           "value": "x-IBM1046"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1097",
+                           "value": "x-IBM1097"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1098",
+                           "value": "x-IBM1098"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1112",
+                           "value": "x-IBM1112"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1122",
+                           "value": "x-IBM1122"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1123",
+                           "value": "x-IBM1123"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1124",
+                           "value": "x-IBM1124"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1166",
+                           "value": "x-IBM1166"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1364",
+                           "value": "x-IBM1364"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1381",
+                           "value": "x-IBM1381"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM1383",
+                           "value": "x-IBM1383"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM300",
+                           "value": "x-IBM300"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM33722",
+                           "value": "x-IBM33722"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM737",
+                           "value": "x-IBM737"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM833",
+                           "value": "x-IBM833"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM834",
+                           "value": "x-IBM834"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM856",
+                           "value": "x-IBM856"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM874",
+                           "value": "x-IBM874"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM875",
+                           "value": "x-IBM875"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM921",
+                           "value": "x-IBM921"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM922",
+                           "value": "x-IBM922"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM930",
+                           "value": "x-IBM930"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM933",
+                           "value": "x-IBM933"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM935",
+                           "value": "x-IBM935"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM937",
+                           "value": "x-IBM937"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM939",
+                           "value": "x-IBM939"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM942",
+                           "value": "x-IBM942"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM942C",
+                           "value": "x-IBM942C"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM943",
+                           "value": "x-IBM943"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM943C",
+                           "value": "x-IBM943C"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM948",
+                           "value": "x-IBM948"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM949",
+                           "value": "x-IBM949"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM949C",
+                           "value": "x-IBM949C"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM950",
+                           "value": "x-IBM950"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM964",
+                           "value": "x-IBM964"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-IBM970",
+                           "value": "x-IBM970"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-ISCII91",
+                           "value": "x-ISCII91"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-ISO-2022-CN-CNS",
+                           "value": "x-ISO-2022-CN-CNS"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-ISO-2022-CN-GB",
+                           "value": "x-ISO-2022-CN-GB"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-iso-8859-11",
+                           "value": "x-iso-8859-11"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-JIS0208",
+                           "value": "x-JIS0208"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-JISAutoDetect",
+                           "value": "x-JISAutoDetect"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-Johab",
+                           "value": "x-Johab"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacArabic",
+                           "value": "x-MacArabic"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacCentralEurope",
+                           "value": "x-MacCentralEurope"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacCroatian",
+                           "value": "x-MacCroatian"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacCyrillic",
+                           "value": "x-MacCyrillic"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacDingbat",
+                           "value": "x-MacDingbat"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacGreek",
+                           "value": "x-MacGreek"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacHebrew",
+                           "value": "x-MacHebrew"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacIceland",
+                           "value": "x-MacIceland"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacRoman",
+                           "value": "x-MacRoman"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacRomania",
+                           "value": "x-MacRomania"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacSymbol",
+                           "value": "x-MacSymbol"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacThai",
+                           "value": "x-MacThai"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacTurkish",
+                           "value": "x-MacTurkish"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MacUkraine",
+                           "value": "x-MacUkraine"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MS932_0213",
+                           "value": "x-MS932_0213"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MS950-HKSCS",
+                           "value": "x-MS950-HKSCS"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-MS950-HKSCS-XP",
+                           "value": "x-MS950-HKSCS-XP"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-mswin-936",
+                           "value": "x-mswin-936"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-PCK",
+                           "value": "x-PCK"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-SJIS_0213",
+                           "value": "x-SJIS_0213"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-UTF-16LE-BOM",
+                           "value": "x-UTF-16LE-BOM"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "X-UTF-32BE-BOM",
+                           "value": "X-UTF-32BE-BOM"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "X-UTF-32LE-BOM",
+                           "value": "X-UTF-32LE-BOM"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-windows-50220",
+                           "value": "x-windows-50220"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-windows-50221",
+                           "value": "x-windows-50221"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-windows-874",
+                           "value": "x-windows-874"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-windows-949",
+                           "value": "x-windows-949"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-windows-950",
+                           "value": "x-windows-950"
+                        },
+                        "canRead": true
+                     },
+                     {
+                        "allowableValue": {
+                           "displayName": "x-windows-iso2022jp",
+                           "value": "x-windows-iso2022jp"
+                        },
+                        "canRead": true
+                     }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Visibility Timeout": {
+                  "name": "Visibility Timeout",
+                  "displayName": "Visibility Timeout",
+                  "description": "The amount of time after a message is received but not deleted that the message is hidden from other consumers",
+                  "defaultValue": "15 mins",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Receive Message Wait Time": {
+                  "name": "Receive Message Wait Time",
+                  "displayName": "Receive Message Wait Time",
+                  "description": "The maximum amount of time to wait on a long polling receive call. Setting this to a value of 1 second or greater will reduce the number of SQS requests and decrease fetch latency at the cost of a constantly active thread.",
+                  "defaultValue": "0 sec",
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "expressionLanguageScope": "Not Supported"
+               },
+               "Proxy Host": {
+                  "name": "Proxy Host",
+                  "displayName": "Proxy Host",
+                  "description": "Proxy host name or IP",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry Only"
+               },
+               "Proxy Host Port": {
+                  "name": "Proxy Host Port",
+                  "displayName": "Proxy Host Port",
+                  "description": "Proxy host port",
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "expressionLanguageScope": "Variable Registry Only"
+               }
+            },
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "comments": "",
+            "lossTolerant": false,
+            "defaultConcurrentTasks": {
+               "TIMER_DRIVEN": "1",
+               "EVENT_DRIVEN": "0",
+               "CRON_DRIVEN": "1"
+            },
+            "defaultSchedulingPeriod": {
+               "TIMER_DRIVEN": "0 sec",
+               "CRON_DRIVEN": "* * * * * ?"
+            }
+         },
+         "validationErrors": [
+            "'Queue URL' is invalid because Queue URL is required"
+         ],
+         "validationStatus": "INVALID",
+         "extensionMissing": false
+      },
+      "inputRequirement": "INPUT_FORBIDDEN",
+      "status": {
+         "name": "GetSQS",
+         "runStatus": "Invalid",
+         "statsLastRefreshed": "05:58:32 UTC",
+         "aggregateSnapshot": {
+            "name": "GetSQS",
+            "type": "GetSQS",
+            "runStatus": "Invalid",
+            "executionNode": "ALL",
+            "bytesRead": 0,
+            "bytesWritten": 0,
+            "read": "0 bytes",
+            "written": "0 bytes",
+            "flowFilesIn": 0,
+            "bytesIn": 0,
+            "input": "0 (0 bytes)",
+            "flowFilesOut": 0,
+            "bytesOut": 0,
+            "output": "0 (0 bytes)",
+            "taskCount": 0,
+            "tasksDurationNanos": 0,
+            "tasks": "0",
+            "tasksDuration": "00:00:00.000",
+            "activeThreadCount": 0,
+            "terminatedThreadCount": 0
+         }
+      },
+      "operatePermissions": {
+         "canRead": true,
+         "canWrite": true
+      }
+   }
+]

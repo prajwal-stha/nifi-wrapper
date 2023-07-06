@@ -1,0 +1,2614 @@
+headers:
+  Content-Type: application/json
+
+# json for creating process group
+create_processGroup:
+  revision: 
+    version: 0
+  position: 
+    x: -4291.357244825604
+    y: 199.99047203395446
+  bulletins: 
+  component: 
+    parentGroupId: 15c835af-0182-1000-8f4c-4f32b13c9a7e
+    position: 
+      x: -5690.9440641914625
+      y: 4190.661030747181
+
+    name: DEMO TEMPLATE 2
+
+
+# json for creating flow file
+create_GenerateFlowFile:
+  revision: 
+    version: 0
+  component: 
+    position: 
+      x: 20
+      y: 20
+    name: TEST
+    type: org.apache.nifi.processors.standard.GenerateFlowFile
+    bundle: 
+      group: org.apache.nifi
+      artifact: nifi-standard-nar
+      version: 1.9.0 
+    config:
+      properties:
+        File Size: 0B
+        Batch Size: 1
+        Data Format: Text
+        Unique FlowFiles: False
+        generate-ff-custom-text: None
+        character-set: UTF-8
+      schedulingPeriod: 1 hour
+      schedulingStrategy: TIMER_DRIVEN
+      executionNode: ALL
+      penaltyDuration: 30 sec
+      yieldDuration: 1 sec
+      bulletinLevel: WARN
+      runDurationMillis: 0
+      concurrentlySchedulableTaskCount: 1
+      comments:
+      lossTolerant: False
+      defaultConcurrentTasks:
+        TIMER_DRIVEN: 1
+        EVENT_DRIVEN: 0
+        CRON_DRIVEN: 1
+      defaultSchedulingPeriod:
+        TIMER_DRIVEN: 0 sec
+        CRON_DRIVEN: '* * * * * ?'
+
+
+# create put email
+create_PutEmail:
+  revision:
+    version: 0
+  component:
+    position:
+      x: 800
+      y: 20
+    name: TEST2
+    type: org.apache.nifi.processors.standard.PutEmail
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-standard-nar
+      version: 1.9.0
+
+
+# create route on attribute
+create_RouteOnAttribute:
+  revision:
+    version: 0
+  component:
+    position:
+      x: 1600
+      y: 20
+    name: TEST3
+    type: org.apache.nifi.processors.standard.RouteOnAttribute
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-standard-nar
+      version: 1.9.0
+
+
+# create execute stream command
+create_ExecuteStreamCommand:
+  revision:
+    version: 0
+  component:
+    position:
+      x: 3200
+      y: 20
+    name: Ingest Emails
+    type: org.apache.nifi.processors.standard.ExecuteStreamCommand
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-standard-nar
+      version: 1.9.0
+
+
+# create get file
+create_GetFile:
+  revision:
+    version: 0
+  component:
+    position:
+      x: 6400
+      y: 20
+    name: Ingest Emails
+    type: org.apache.nifi.processors.standard.GetFile
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-standard-nar
+      version: 1.9.0
+
+# create extract email headers
+create_ExtractEmailHeaders:
+  revision:
+    version: 0
+  component:
+    position:
+      x: 6400
+      y: 60
+    name: Ingest Emails
+    type: org.apache.nifi.processors.standard.ExtractEmailHeaders
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-standard-nar
+      version: 1.9.0
+
+
+# create extract email attachments
+create_ExtractEmailAttachments:
+  revision:
+    version: 0
+  component:
+    position:
+      x: 6400
+      y: 60
+    name: Ingest Emails
+    type: org.apache.nifi.processors.standard.ExtractEmailAttachments
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-standard-nar
+      version: 1.9.0
+
+
+# create connection
+create_connection:
+  revision:
+    version: 0
+  component:
+    source:
+      id: b3b91986-123f-1177-7237-3c6c6f469e94
+      type: PROCESSOR
+      groupId: 3a14237a-0177-1000-01bc-6cdae8eae1b7
+      name: TEST
+      running: False
+      comments: 
+    destination:
+      id: b3b91988-123f-1177-deff-b36db0131108
+      type: PROCESSOR
+      groupId: 3a14237a-0177-1000-01bc-6cdae8eae1b7
+      name: TEST2
+      running: False
+      comments: 
+    selectedRelationships: 
+      success
+    
+    availableRelationships: 
+      success
+    
+
+
+# create snippet
+create_snippet:
+  snippet:
+    parentGroupId: 15c835af-0182-1000-8f4c-4f32b13c9a7e
+    processors: {}
+    funnels: {}
+    inputPorts: {} 
+    outputPorts: {}
+    remoteProcessGroups: {} 
+    processGroups:
+      b3b91992-123f-1177-dbe6-793c05dccad1:
+        version: 1
+    connections: {}
+    labels: {}
+  
+
+# create template
+create_template:
+  name: TEST TEMPLATE
+  description: ""
+  snippetId: 980e46c5-b76a-183f-ffff-ffffb4770059
+
+
+# instance template
+instance_template:
+    originX: -4290.9440641914625
+    originY: 4190.661030747181
+    templateId: 66f00342-f36d-4575-a387-b2db5ed9d79a
+    disconnectedNodeAcknowledged: True
+
+
+# update put email
+update_putEmail:
+  revision:
+    version: 0
+  component:
+      id: 6391462d-0166-1000-0000-000002b215e0
+      config:
+          properties:
+              SMTP Hostname: blabla
+              To: blabla
+              From: blabla
+              SMTP Username: blabla
+              SMTP Password: blabla
+              Message: blabla
+
+
+# create output port
+create_outputPort:
+  revision:
+    version: 0
+  position:
+    x: -146.88454513179443
+    y: 2666.1243636607755
+  permissions: 
+    canRead: True
+    canWrite: True
+  bulletins: 
+  disconnectedNodeAcknowledged: True
+  component:
+    position:
+      x: -146.88454513179443
+      y: 2666.1243636607755
+    name: erhaltenes SDS
+    type: OUTPUT_PORT
+    concurrentlySchedulableTaskCount: 1
+  status:
+    name: erhaltenes SDS
+    runStatus: Stopped
+    statsLastRefreshed: 12:21:02 UTC
+    aggregateSnapshot: 
+      name: erhaltenes SDS
+      activeThreadCount: 0
+      flowFilesIn: 0
+      bytesIn: 0
+      input: 0 (0 bytes)
+      flowFilesOut: 0
+      bytesOut: 0
+      output: 0 (0 bytes)
+      runStatus: Stopped
+  portType: OUTPUT_PORT
+  operatePermissions: 
+      canRead: True
+      canWrite: True
+
+
+# create getSQS
+create_getSQS:
+
+  revision:
+    version: 0
+  position:
+    x: -249.7675313176444
+    'y': 1189.6382634490726
+  permissions:
+    canRead: true
+    canWrite: true
+  bulletins: []
+  component:
+    position:
+      x: -249.7675313176444
+      'y': 1189.6382634490726
+    name: GetSQS
+    type: org.apache.nifi.processors.aws.sqs.GetSQS
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-aws-nar
+      version: 1.9.0
+    state: STOPPED
+    style: {}
+    supportsParallelProcessing: true
+    supportsEventDriven: false
+    supportsBatching: true
+    persistsState: false
+    restricted: false
+    deprecated: false
+    executionNodeRestricted: false
+    multipleVersionsAvailable: false
+    inputRequirement: INPUT_FORBIDDEN
+    config:
+      properties:
+        Queue URL: null
+        Auto Delete Messages: 'true'
+        Access Key: null
+        Secret Key: null
+        Credentials File: null
+        AWS Credentials Provider service: null
+        Region: us-west-2
+        Batch Size: '10'
+        Communications Timeout: 30 secs
+        Endpoint Override URL: null
+        Character Set: UTF-8
+        Visibility Timeout: 15 mins
+        Receive Message Wait Time: 0 sec
+        Proxy Host: null
+        Proxy Host Port: null
+      descriptors:
+        Queue URL:
+          name: Queue URL
+          displayName: Queue URL
+          description: The URL of the queue to act upon
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry Only
+        Auto Delete Messages:
+          name: Auto Delete Messages
+          displayName: Auto Delete Messages
+          description: >-
+            Specifies whether the messages should be automatically deleted by the
+            processors once they have been received.
+          defaultValue: 'true'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Access Key:
+          name: Access Key
+          displayName: Access Key ID
+          description: ''
+          required: false
+          sensitive: true
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry Only
+        Secret Key:
+          name: Secret Key
+          displayName: Secret Access Key
+          description: ''
+          required: false
+          sensitive: true
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry Only
+        Credentials File:
+          name: Credentials File
+          displayName: Credentials File
+          description: >-
+            Path to a file containing AWS access key and secret key in properties
+            file format.
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        AWS Credentials Provider service:
+          name: AWS Credentials Provider service
+          displayName: AWS Credentials Provider service
+          description: The Controller Service that is used to obtain aws credentials provider
+          allowableValues: []
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+          identifiesControllerService: >-
+            org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderService
+          identifiesControllerServiceBundle:
+            group: org.apache.nifi
+            artifact: nifi-aws-service-api-nar
+            version: 1.9.0
+        Region:
+          name: Region
+          displayName: Region
+          description: ''
+          defaultValue: us-west-2
+          allowableValues:
+            - allowableValue:
+                displayName: AWS GovCloud (US)
+                value: us-gov-west-1
+                description: 'AWS Region Code : us-gov-west-1'
+              canRead: true
+            - allowableValue:
+                displayName: AWS GovCloud (US-East)
+                value: us-gov-east-1
+                description: 'AWS Region Code : us-gov-east-1'
+              canRead: true
+            - allowableValue:
+                displayName: US East (N. Virginia)
+                value: us-east-1
+                description: 'AWS Region Code : us-east-1'
+              canRead: true
+            - allowableValue:
+                displayName: US East (Ohio)
+                value: us-east-2
+                description: 'AWS Region Code : us-east-2'
+              canRead: true
+            - allowableValue:
+                displayName: US West (N. California)
+                value: us-west-1
+                description: 'AWS Region Code : us-west-1'
+              canRead: true
+            - allowableValue:
+                displayName: US West (Oregon)
+                value: us-west-2
+                description: 'AWS Region Code : us-west-2'
+              canRead: true
+            - allowableValue:
+                displayName: EU (Ireland)
+                value: eu-west-1
+                description: 'AWS Region Code : eu-west-1'
+              canRead: true
+            - allowableValue:
+                displayName: EU (London)
+                value: eu-west-2
+                description: 'AWS Region Code : eu-west-2'
+              canRead: true
+            - allowableValue:
+                displayName: EU (Paris)
+                value: eu-west-3
+                description: 'AWS Region Code : eu-west-3'
+              canRead: true
+            - allowableValue:
+                displayName: EU (Frankfurt)
+                value: eu-central-1
+                description: 'AWS Region Code : eu-central-1'
+              canRead: true
+            - allowableValue:
+                displayName: Asia Pacific (Mumbai)
+                value: ap-south-1
+                description: 'AWS Region Code : ap-south-1'
+              canRead: true
+            - allowableValue:
+                displayName: Asia Pacific (Singapore)
+                value: ap-southeast-1
+                description: 'AWS Region Code : ap-southeast-1'
+              canRead: true
+            - allowableValue:
+                displayName: Asia Pacific (Sydney)
+                value: ap-southeast-2
+                description: 'AWS Region Code : ap-southeast-2'
+              canRead: true
+            - allowableValue:
+                displayName: Asia Pacific (Tokyo)
+                value: ap-northeast-1
+                description: 'AWS Region Code : ap-northeast-1'
+              canRead: true
+            - allowableValue:
+                displayName: Asia Pacific (Seoul)
+                value: ap-northeast-2
+                description: 'AWS Region Code : ap-northeast-2'
+              canRead: true
+            - allowableValue:
+                displayName: South America (Sao Paulo)
+                value: sa-east-1
+                description: 'AWS Region Code : sa-east-1'
+              canRead: true
+            - allowableValue:
+                displayName: China (Beijing)
+                value: cn-north-1
+                description: 'AWS Region Code : cn-north-1'
+              canRead: true
+            - allowableValue:
+                displayName: China (Ningxia)
+                value: cn-northwest-1
+                description: 'AWS Region Code : cn-northwest-1'
+              canRead: true
+            - allowableValue:
+                displayName: Canada (Central)
+                value: ca-central-1
+                description: 'AWS Region Code : ca-central-1'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Batch Size:
+          name: Batch Size
+          displayName: Batch Size
+          description: The maximum number of messages to send in a single network request
+          defaultValue: '10'
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Communications Timeout:
+          name: Communications Timeout
+          displayName: Communications Timeout
+          description: ''
+          defaultValue: 30 secs
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Endpoint Override URL:
+          name: Endpoint Override URL
+          displayName: Endpoint Override URL
+          description: >-
+            Endpoint URL to use instead of the AWS default including scheme, host,
+            port, and path. The AWS libraries select an endpoint URL based on the
+            AWS region, but this property overrides the selected endpoint URL,
+            allowing use with other S3-compatible endpoints.
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry Only
+        Character Set:
+          name: Character Set
+          displayName: Character Set
+          description: >-
+            The Character Set that should be used to encode the textual content of
+            the SQS message
+          defaultValue: UTF-8
+          allowableValues:
+            - allowableValue:
+                displayName: Big5
+                value: Big5
+              canRead: true
+            - allowableValue:
+                displayName: Big5-HKSCS
+                value: Big5-HKSCS
+              canRead: true
+            - allowableValue:
+                displayName: CESU-8
+                value: CESU-8
+              canRead: true
+            - allowableValue:
+                displayName: EUC-JP
+                value: EUC-JP
+              canRead: true
+            - allowableValue:
+                displayName: EUC-KR
+                value: EUC-KR
+              canRead: true
+            - allowableValue:
+                displayName: GB18030
+                value: GB18030
+              canRead: true
+            - allowableValue:
+                displayName: GB2312
+                value: GB2312
+              canRead: true
+            - allowableValue:
+                displayName: GBK
+                value: GBK
+              canRead: true
+            - allowableValue:
+                displayName: IBM-Thai
+                value: IBM-Thai
+              canRead: true
+            - allowableValue:
+                displayName: IBM00858
+                value: IBM00858
+              canRead: true
+            - allowableValue:
+                displayName: IBM01140
+                value: IBM01140
+              canRead: true
+            - allowableValue:
+                displayName: IBM01141
+                value: IBM01141
+              canRead: true
+            - allowableValue:
+                displayName: IBM01142
+                value: IBM01142
+              canRead: true
+            - allowableValue:
+                displayName: IBM01143
+                value: IBM01143
+              canRead: true
+            - allowableValue:
+                displayName: IBM01144
+                value: IBM01144
+              canRead: true
+            - allowableValue:
+                displayName: IBM01145
+                value: IBM01145
+              canRead: true
+            - allowableValue:
+                displayName: IBM01146
+                value: IBM01146
+              canRead: true
+            - allowableValue:
+                displayName: IBM01147
+                value: IBM01147
+              canRead: true
+            - allowableValue:
+                displayName: IBM01148
+                value: IBM01148
+              canRead: true
+            - allowableValue:
+                displayName: IBM01149
+                value: IBM01149
+              canRead: true
+            - allowableValue:
+                displayName: IBM037
+                value: IBM037
+              canRead: true
+            - allowableValue:
+                displayName: IBM1026
+                value: IBM1026
+              canRead: true
+            - allowableValue:
+                displayName: IBM1047
+                value: IBM1047
+              canRead: true
+            - allowableValue:
+                displayName: IBM273
+                value: IBM273
+              canRead: true
+            - allowableValue:
+                displayName: IBM277
+                value: IBM277
+              canRead: true
+            - allowableValue:
+                displayName: IBM278
+                value: IBM278
+              canRead: true
+            - allowableValue:
+                displayName: IBM280
+                value: IBM280
+              canRead: true
+            - allowableValue:
+                displayName: IBM284
+                value: IBM284
+              canRead: true
+            - allowableValue:
+                displayName: IBM285
+                value: IBM285
+              canRead: true
+            - allowableValue:
+                displayName: IBM290
+                value: IBM290
+              canRead: true
+            - allowableValue:
+                displayName: IBM297
+                value: IBM297
+              canRead: true
+            - allowableValue:
+                displayName: IBM420
+                value: IBM420
+              canRead: true
+            - allowableValue:
+                displayName: IBM424
+                value: IBM424
+              canRead: true
+            - allowableValue:
+                displayName: IBM437
+                value: IBM437
+              canRead: true
+            - allowableValue:
+                displayName: IBM500
+                value: IBM500
+              canRead: true
+            - allowableValue:
+                displayName: IBM775
+                value: IBM775
+              canRead: true
+            - allowableValue:
+                displayName: IBM850
+                value: IBM850
+              canRead: true
+            - allowableValue:
+                displayName: IBM852
+                value: IBM852
+              canRead: true
+            - allowableValue:
+                displayName: IBM855
+                value: IBM855
+              canRead: true
+            - allowableValue:
+                displayName: IBM857
+                value: IBM857
+              canRead: true
+            - allowableValue:
+                displayName: IBM860
+                value: IBM860
+              canRead: true
+            - allowableValue:
+                displayName: IBM861
+                value: IBM861
+              canRead: true
+            - allowableValue:
+                displayName: IBM862
+                value: IBM862
+              canRead: true
+            - allowableValue:
+                displayName: IBM863
+                value: IBM863
+              canRead: true
+            - allowableValue:
+                displayName: IBM864
+                value: IBM864
+              canRead: true
+            - allowableValue:
+                displayName: IBM865
+                value: IBM865
+              canRead: true
+            - allowableValue:
+                displayName: IBM866
+                value: IBM866
+              canRead: true
+            - allowableValue:
+                displayName: IBM868
+                value: IBM868
+              canRead: true
+            - allowableValue:
+                displayName: IBM869
+                value: IBM869
+              canRead: true
+            - allowableValue:
+                displayName: IBM870
+                value: IBM870
+              canRead: true
+            - allowableValue:
+                displayName: IBM871
+                value: IBM871
+              canRead: true
+            - allowableValue:
+                displayName: IBM918
+                value: IBM918
+              canRead: true
+            - allowableValue:
+                displayName: ISO-2022-CN
+                value: ISO-2022-CN
+              canRead: true
+            - allowableValue:
+                displayName: ISO-2022-JP
+                value: ISO-2022-JP
+              canRead: true
+            - allowableValue:
+                displayName: ISO-2022-JP-2
+                value: ISO-2022-JP-2
+              canRead: true
+            - allowableValue:
+                displayName: ISO-2022-KR
+                value: ISO-2022-KR
+              canRead: true
+            - allowableValue:
+                displayName: ISO-8859-1
+                value: ISO-8859-1
+              canRead: true
+            - allowableValue:
+                displayName: ISO-8859-13
+                value: ISO-8859-13
+              canRead: true
+            - allowableValue:
+                displayName: ISO-8859-15
+                value: ISO-8859-15
+              canRead: true
+            - allowableValue:
+                displayName: ISO-8859-2
+                value: ISO-8859-2
+              canRead: true
+            - allowableValue:
+                displayName: ISO-8859-3
+                value: ISO-8859-3
+              canRead: true
+            - allowableValue:
+                displayName: ISO-8859-4
+                value: ISO-8859-4
+              canRead: true
+            - allowableValue:
+                displayName: ISO-8859-5
+                value: ISO-8859-5
+              canRead: true
+            - allowableValue:
+                displayName: ISO-8859-6
+                value: ISO-8859-6
+              canRead: true
+            - allowableValue:
+                displayName: ISO-8859-7
+                value: ISO-8859-7
+              canRead: true
+            - allowableValue:
+                displayName: ISO-8859-8
+                value: ISO-8859-8
+              canRead: true
+            - allowableValue:
+                displayName: ISO-8859-9
+                value: ISO-8859-9
+              canRead: true
+            - allowableValue:
+                displayName: JIS_X0201
+                value: JIS_X0201
+              canRead: true
+            - allowableValue:
+                displayName: JIS_X0212-1990
+                value: JIS_X0212-1990
+              canRead: true
+            - allowableValue:
+                displayName: KOI8-R
+                value: KOI8-R
+              canRead: true
+            - allowableValue:
+                displayName: KOI8-U
+                value: KOI8-U
+              canRead: true
+            - allowableValue:
+                displayName: Shift_JIS
+                value: Shift_JIS
+              canRead: true
+            - allowableValue:
+                displayName: TIS-620
+                value: TIS-620
+              canRead: true
+            - allowableValue:
+                displayName: US-ASCII
+                value: US-ASCII
+              canRead: true
+            - allowableValue:
+                displayName: UTF-16
+                value: UTF-16
+              canRead: true
+            - allowableValue:
+                displayName: UTF-16BE
+                value: UTF-16BE
+              canRead: true
+            - allowableValue:
+                displayName: UTF-16LE
+                value: UTF-16LE
+              canRead: true
+            - allowableValue:
+                displayName: UTF-32
+                value: UTF-32
+              canRead: true
+            - allowableValue:
+                displayName: UTF-32BE
+                value: UTF-32BE
+              canRead: true
+            - allowableValue:
+                displayName: UTF-32LE
+                value: UTF-32LE
+              canRead: true
+            - allowableValue:
+                displayName: UTF-8
+                value: UTF-8
+              canRead: true
+            - allowableValue:
+                displayName: windows-1250
+                value: windows-1250
+              canRead: true
+            - allowableValue:
+                displayName: windows-1251
+                value: windows-1251
+              canRead: true
+            - allowableValue:
+                displayName: windows-1252
+                value: windows-1252
+              canRead: true
+            - allowableValue:
+                displayName: windows-1253
+                value: windows-1253
+              canRead: true
+            - allowableValue:
+                displayName: windows-1254
+                value: windows-1254
+              canRead: true
+            - allowableValue:
+                displayName: windows-1255
+                value: windows-1255
+              canRead: true
+            - allowableValue:
+                displayName: windows-1256
+                value: windows-1256
+              canRead: true
+            - allowableValue:
+                displayName: windows-1257
+                value: windows-1257
+              canRead: true
+            - allowableValue:
+                displayName: windows-1258
+                value: windows-1258
+              canRead: true
+            - allowableValue:
+                displayName: windows-31j
+                value: windows-31j
+              canRead: true
+            - allowableValue:
+                displayName: x-Big5-HKSCS-2001
+                value: x-Big5-HKSCS-2001
+              canRead: true
+            - allowableValue:
+                displayName: x-Big5-Solaris
+                value: x-Big5-Solaris
+              canRead: true
+            - allowableValue:
+                displayName: x-COMPOUND_TEXT
+                value: x-COMPOUND_TEXT
+              canRead: true
+            - allowableValue:
+                displayName: x-euc-jp-linux
+                value: x-euc-jp-linux
+              canRead: true
+            - allowableValue:
+                displayName: x-EUC-TW
+                value: x-EUC-TW
+              canRead: true
+            - allowableValue:
+                displayName: x-eucJP-Open
+                value: x-eucJP-Open
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1006
+                value: x-IBM1006
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1025
+                value: x-IBM1025
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1046
+                value: x-IBM1046
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1097
+                value: x-IBM1097
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1098
+                value: x-IBM1098
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1112
+                value: x-IBM1112
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1122
+                value: x-IBM1122
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1123
+                value: x-IBM1123
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1124
+                value: x-IBM1124
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1166
+                value: x-IBM1166
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1364
+                value: x-IBM1364
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1381
+                value: x-IBM1381
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM1383
+                value: x-IBM1383
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM300
+                value: x-IBM300
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM33722
+                value: x-IBM33722
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM737
+                value: x-IBM737
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM833
+                value: x-IBM833
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM834
+                value: x-IBM834
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM856
+                value: x-IBM856
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM874
+                value: x-IBM874
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM875
+                value: x-IBM875
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM921
+                value: x-IBM921
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM922
+                value: x-IBM922
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM930
+                value: x-IBM930
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM933
+                value: x-IBM933
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM935
+                value: x-IBM935
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM937
+                value: x-IBM937
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM939
+                value: x-IBM939
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM942
+                value: x-IBM942
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM942C
+                value: x-IBM942C
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM943
+                value: x-IBM943
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM943C
+                value: x-IBM943C
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM948
+                value: x-IBM948
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM949
+                value: x-IBM949
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM949C
+                value: x-IBM949C
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM950
+                value: x-IBM950
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM964
+                value: x-IBM964
+              canRead: true
+            - allowableValue:
+                displayName: x-IBM970
+                value: x-IBM970
+              canRead: true
+            - allowableValue:
+                displayName: x-ISCII91
+                value: x-ISCII91
+              canRead: true
+            - allowableValue:
+                displayName: x-ISO-2022-CN-CNS
+                value: x-ISO-2022-CN-CNS
+              canRead: true
+            - allowableValue:
+                displayName: x-ISO-2022-CN-GB
+                value: x-ISO-2022-CN-GB
+              canRead: true
+            - allowableValue:
+                displayName: x-iso-8859-11
+                value: x-iso-8859-11
+              canRead: true
+            - allowableValue:
+                displayName: x-JIS0208
+                value: x-JIS0208
+              canRead: true
+            - allowableValue:
+                displayName: x-JISAutoDetect
+                value: x-JISAutoDetect
+              canRead: true
+            - allowableValue:
+                displayName: x-Johab
+                value: x-Johab
+              canRead: true
+            - allowableValue:
+                displayName: x-MacArabic
+                value: x-MacArabic
+              canRead: true
+            - allowableValue:
+                displayName: x-MacCentralEurope
+                value: x-MacCentralEurope
+              canRead: true
+            - allowableValue:
+                displayName: x-MacCroatian
+                value: x-MacCroatian
+              canRead: true
+            - allowableValue:
+                displayName: x-MacCyrillic
+                value: x-MacCyrillic
+              canRead: true
+            - allowableValue:
+                displayName: x-MacDingbat
+                value: x-MacDingbat
+              canRead: true
+            - allowableValue:
+                displayName: x-MacGreek
+                value: x-MacGreek
+              canRead: true
+            - allowableValue:
+                displayName: x-MacHebrew
+                value: x-MacHebrew
+              canRead: true
+            - allowableValue:
+                displayName: x-MacIceland
+                value: x-MacIceland
+              canRead: true
+            - allowableValue:
+                displayName: x-MacRoman
+                value: x-MacRoman
+              canRead: true
+            - allowableValue:
+                displayName: x-MacRomania
+                value: x-MacRomania
+              canRead: true
+            - allowableValue:
+                displayName: x-MacSymbol
+                value: x-MacSymbol
+              canRead: true
+            - allowableValue:
+                displayName: x-MacThai
+                value: x-MacThai
+              canRead: true
+            - allowableValue:
+                displayName: x-MacTurkish
+                value: x-MacTurkish
+              canRead: true
+            - allowableValue:
+                displayName: x-MacUkraine
+                value: x-MacUkraine
+              canRead: true
+            - allowableValue:
+                displayName: x-MS932_0213
+                value: x-MS932_0213
+              canRead: true
+            - allowableValue:
+                displayName: x-MS950-HKSCS
+                value: x-MS950-HKSCS
+              canRead: true
+            - allowableValue:
+                displayName: x-MS950-HKSCS-XP
+                value: x-MS950-HKSCS-XP
+              canRead: true
+            - allowableValue:
+                displayName: x-mswin-936
+                value: x-mswin-936
+              canRead: true
+            - allowableValue:
+                displayName: x-PCK
+                value: x-PCK
+              canRead: true
+            - allowableValue:
+                displayName: x-SJIS_0213
+                value: x-SJIS_0213
+              canRead: true
+            - allowableValue:
+                displayName: x-UTF-16LE-BOM
+                value: x-UTF-16LE-BOM
+              canRead: true
+            - allowableValue:
+                displayName: X-UTF-32BE-BOM
+                value: X-UTF-32BE-BOM
+              canRead: true
+            - allowableValue:
+                displayName: X-UTF-32LE-BOM
+                value: X-UTF-32LE-BOM
+              canRead: true
+            - allowableValue:
+                displayName: x-windows-50220
+                value: x-windows-50220
+              canRead: true
+            - allowableValue:
+                displayName: x-windows-50221
+                value: x-windows-50221
+              canRead: true
+            - allowableValue:
+                displayName: x-windows-874
+                value: x-windows-874
+              canRead: true
+            - allowableValue:
+                displayName: x-windows-949
+                value: x-windows-949
+              canRead: true
+            - allowableValue:
+                displayName: x-windows-950
+                value: x-windows-950
+              canRead: true
+            - allowableValue:
+                displayName: x-windows-iso2022jp
+                value: x-windows-iso2022jp
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Visibility Timeout:
+          name: Visibility Timeout
+          displayName: Visibility Timeout
+          description: >-
+            The amount of time after a message is received but not deleted that
+            the message is hidden from other consumers
+          defaultValue: 15 mins
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Receive Message Wait Time:
+          name: Receive Message Wait Time
+          displayName: Receive Message Wait Time
+          description: >-
+            The maximum amount of time to wait on a long polling receive call.
+            Setting this to a value of 1 second or greater will reduce the number
+            of SQS requests and decrease fetch latency at the cost of a constantly
+            active thread.
+          defaultValue: 0 sec
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Proxy Host:
+          name: Proxy Host
+          displayName: Proxy Host
+          description: Proxy host name or IP
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry Only
+        Proxy Host Port:
+          name: Proxy Host Port
+          displayName: Proxy Host Port
+          description: Proxy host port
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry Only
+      schedulingPeriod: 0 sec
+      schedulingStrategy: TIMER_DRIVEN
+      executionNode: ALL
+      penaltyDuration: 30 sec
+      yieldDuration: 1 sec
+      bulletinLevel: WARN
+      runDurationMillis: 0
+      concurrentlySchedulableTaskCount: 1
+      comments: ''
+      lossTolerant: false
+      defaultConcurrentTasks:
+        TIMER_DRIVEN: '1'
+        EVENT_DRIVEN: '0'
+        CRON_DRIVEN: '1'
+      defaultSchedulingPeriod:
+        TIMER_DRIVEN: 0 sec
+        CRON_DRIVEN: '* * * * * ?'
+    validationErrors:
+      - '''Queue URL'' is invalid because Queue URL is required'
+    validationStatus: INVALID
+    extensionMissing: false
+  inputRequirement: INPUT_FORBIDDEN
+  status:
+    name: GetSQS
+    runStatus: Invalid
+    statsLastRefreshed: 05:58:32 UTC
+    aggregateSnapshot:
+      name: GetSQS
+      type: GetSQS
+      runStatus: Invalid
+      executionNode: ALL
+      bytesRead: 0
+      bytesWritten: 0
+      read: 0 bytes
+      written: 0 bytes
+      flowFilesIn: 0
+      bytesIn: 0
+      input: 0 (0 bytes)
+      flowFilesOut: 0
+      bytesOut: 0
+      output: 0 (0 bytes)
+      taskCount: 0
+      tasksDurationNanos: 0
+      tasks: '0'
+      tasksDuration: '00:00:00.000'
+      activeThreadCount: 0
+      terminatedThreadCount: 0
+  operatePermissions:
+    canRead: true
+    canWrite: true
+
+
+# create split json
+create_splitJson:
+  revision:
+    version: 0
+  position:
+    x: 432.5950537501046
+    'y': 1184.3780095428226
+  permissions:
+    canRead: true
+    canWrite: true
+  bulletins: []
+  component:
+    position:
+      x: 432.5950537501046
+      'y': 1184.3780095428226
+    name: SplitJson
+    type: org.apache.nifi.processors.standard.SplitJson
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-standard-nar
+      version: 1.9.0
+    state: STOPPED
+    style: {}
+    relationships:
+      - name: failure
+        description: If a FlowFile fails processing for any reason (for example, the FlowFile is not valid JSON or the specified path does not exist), it will be routed to this relationship
+        autoTerminate: false
+      - name: original
+        description: The original FlowFile that was split into segments. If the FlowFile fails processing, nothing will be sent to this relationship
+        autoTerminate: false
+      - name: split
+        description: All segments of the original FlowFile will be routed to this relationship
+        autoTerminate: false
+    supportsParallelProcessing: true
+    supportsEventDriven: true
+    supportsBatching: true
+    persistsState: false
+    restricted: false
+    deprecated: false
+    executionNodeRestricted: false
+    multipleVersionsAvailable: false
+    inputRequirement: INPUT_REQUIRED
+    config:
+      properties:
+        JsonPath Expression: $.Records[*].s3.object.key
+        Null Value Representation: empty string
+      descriptors:
+        JsonPath Expression:
+          name: JsonPath Expression
+          displayName: JsonPath Expression
+          description: A JsonPath expression that indicates the array element to split into JSON/scalar fragments.
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Null Value Representation:
+          name: Null Value Representation
+          displayName: Null Value Representation
+          description: Indicates the desired representation of JSON Path expressions resulting in a null value.
+          defaultValue: empty string
+          allowableValues:
+            - allowableValue:
+                displayName: empty string
+                value: empty string
+              canRead: true
+            - allowableValue:
+                displayName: the string 'null'
+                value: the string 'null'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+      schedulingPeriod: 0 sec
+      schedulingStrategy: TIMER_DRIVEN
+      executionNode: ALL
+      penaltyDuration: 30 sec
+      yieldDuration: 1 sec
+      bulletinLevel: WARN
+      runDurationMillis: 0
+      concurrentlySchedulableTaskCount: 1
+      comments: ''
+      lossTolerant: false
+      defaultConcurrentTasks:
+        TIMER_DRIVEN: '1'
+        EVENT_DRIVEN: '0'
+        CRON_DRIVEN: '1'
+      defaultSchedulingPeriod:
+        TIMER_DRIVEN: 0 sec
+        CRON_DRIVEN: '* * * * * ?'
+    validationErrors:
+      - '''Relationship failure'' is invalid because Relationship ''failure'' is not connected to any component and is not auto-terminated'
+      - '''Relationship original'' is invalid because Relationship ''original'' is not connected to any component and is not auto-terminated'
+    validationStatus: INVALID
+    extensionMissing: false
+  inputRequirement: INPUT_REQUIRED
+  status:
+    name: SplitJson
+    runStatus: Invalid
+    statsLastRefreshed: 07:12:22 UTC
+    aggregateSnapshot:
+      name: SplitJson
+      type: SplitJson
+      runStatus: Invalid
+      executionNode: ALL
+      bytesRead: 0
+      bytesWritten: 0
+      read: 0 bytes
+      written: 0 bytes
+      flowFilesIn: 0
+      bytesIn: 0
+      input: 0 (0 bytes)
+      flowFilesOut: 0
+      bytesOut: 0
+      output: 0 (0 bytes)
+      taskCount: 0
+      tasksDurationNanos: 0
+      tasks: '0'
+      tasksDuration: '00:00:00.000'
+      activeThreadCount: 0
+      terminatedThreadCount: 0
+  operatePermissions:
+    canRead: true
+    canWrite: true
+
+# create update attribute
+create_updateAttribute:
+  revision:
+    version: 0
+  position:
+    x: -93.27605716603307
+    'y': 1415.9519841521978
+  permissions:
+    canRead: true
+    canWrite: true
+  bulletins: []
+  component:
+    position:
+      x: -93.27605716603307
+      'y': 1415.9519841521978
+    name: UpdateAttribute
+    type: org.apache.nifi.processors.attributes.UpdateAttribute
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-update-attribute-nar
+      version: 1.9.0
+    state: STOPPED
+    style: {}
+    relationships:
+      - name: success
+        description: All successful FlowFiles are routed to this relationship
+        autoTerminate: false
+    supportsParallelProcessing: true
+    supportsEventDriven: true
+    supportsBatching: true
+    persistsState: true
+    restricted: false
+    deprecated: false
+    executionNodeRestricted: false
+    multipleVersionsAvailable: false
+    inputRequirement: INPUT_REQUIRED
+    config:
+      properties:
+        Delete Attributes Expression: null
+        Store State: Do not store state
+        Stateful Variables Initial Value: null
+        canonical-value-lookup-cache-size: '100'
+        filename: ${filename:replaceAll("/", "-")}
+      descriptors:
+        Delete Attributes Expression:
+          name: Delete Attributes Expression
+          displayName: Delete Attributes Expression
+          description: Regular expression for attributes to be deleted from FlowFiles.  Existing attributes that match will be deleted regardless of whether they are updated by this processor.
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry and FlowFile Attributes
+        Store State:
+          name: Store State
+          displayName: Store State
+          description: Select whether or not state will be stored. Selecting 'Stateless' will offer the default functionality of purely updating the attributes on a FlowFile in a stateless manner. Selecting a stateful option will not only store the attributes on the FlowFile but also in the Processors state. See the 'Stateful Usage' topic of the 'Additional Details' section of this processor's documentation for more information
+          defaultValue: Do not store state
+          allowableValues:
+            - allowableValue:
+                displayName: Do not store state
+                value: Do not store state
+              canRead: true
+            - allowableValue:
+                displayName: Store state locally
+                value: Store state locally
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Stateful Variables Initial Value:
+          name: Stateful Variables Initial Value
+          displayName: Stateful Variables Initial Value
+          description: If using state to set/reference variables then this value is used to set the initial value of the stateful variable. This will only be used in the @OnScheduled method when state does not contain a value for the variable. This is required if running statefully but can be empty if needed.
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        canonical-value-lookup-cache-size:
+          name: canonical-value-lookup-cache-size
+          displayName: Cache Value Lookup Cache Size
+          description: Specifies how many canonical lookup values should be stored in the cache
+          defaultValue: '100'
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        filename:
+          name: filename
+          displayName: filename
+          description: ''
+          required: false
+          sensitive: false
+          dynamic: true
+          supportsEl: true
+          expressionLanguageScope: Variable Registry and FlowFile Attributes
+      schedulingPeriod: 0 sec
+      schedulingStrategy: TIMER_DRIVEN
+      executionNode: ALL
+      penaltyDuration: 30 sec
+      yieldDuration: 1 sec
+      bulletinLevel: WARN
+      runDurationMillis: 0
+      concurrentlySchedulableTaskCount: 1
+      comments: ''
+      customUiUrl: /nifi-update-attribute-ui-1.9.0/configure
+      lossTolerant: false
+      defaultConcurrentTasks:
+        TIMER_DRIVEN: '1'
+        EVENT_DRIVEN: '0'
+        CRON_DRIVEN: '1'
+      defaultSchedulingPeriod:
+        TIMER_DRIVEN: 0 sec
+        CRON_DRIVEN: '* * * * * ?'
+    validationStatus: VALID
+    extensionMissing: false
+  inputRequirement: INPUT_REQUIRED
+  status:
+    name: UpdateAttribute
+    runStatus: Stopped
+    statsLastRefreshed: 07:21:27 UTC
+    aggregateSnapshot:
+      name: UpdateAttribute
+      type: UpdateAttribute
+      runStatus: Stopped
+      executionNode: ALL
+      bytesRead: 0
+      bytesWritten: 0
+      read: 0 bytes
+      written: 0 bytes
+      flowFilesIn: 0
+      bytesIn: 0
+      input: 0 (0 bytes)
+      flowFilesOut: 0
+      bytesOut: 0
+      output: 0 (0 bytes)
+      taskCount: 0
+      tasksDurationNanos: 0
+      tasks: '0'
+      tasksDuration: '00:00:00.000'
+      activeThreadCount: 0
+      terminatedThreadCount: 0
+  operatePermissions:
+    canRead: true
+    canWrite: true
+
+
+# create extract text
+create_extractText:
+  revision:
+    version: 0
+  position:
+    x: 432.5950537501046
+    'y': 1415.9519841521978
+  permissions:
+    canRead: true
+    canWrite: true
+  bulletins: []
+  component:
+    position:
+      x: 432.5950537501046
+      'y': 1415.9519841521978
+    name: ExtractText
+    type: org.apache.nifi.processors.standard.ExtractText
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-standard-nar
+      version: 1.9.0
+    state: STOPPED
+    style: {}
+    relationships:
+      - name: matched
+        description: FlowFiles are routed to this relationship when the Regular Expression is successfully evaluated and the FlowFile is modified as a result
+        autoTerminate: false
+      - name: unmatched
+        description: FlowFiles are routed to this relationship when no provided Regular Expression matches the content of the FlowFile
+        autoTerminate: false
+    supportsParallelProcessing: true
+    supportsEventDriven: true
+    supportsBatching: true
+    persistsState: false
+    restricted: false
+    deprecated: false
+    executionNodeRestricted: false
+    multipleVersionsAvailable: false
+    inputRequirement: INPUT_REQUIRED
+    config:
+      properties:
+        Character Set: UTF-8
+        Maximum Buffer Size: 1 MB
+        Maximum Capture Group Length: '1024'
+        Enable Canonical Equivalence: 'false'
+        Enable Case-insensitive Matching: 'false'
+        Permit Whitespace and Comments in Pattern: 'false'
+        Enable DOTALL Mode: 'false'
+        Enable Literal Parsing of the Pattern: 'false'
+        Enable Multiline Mode: 'false'
+        Enable Unicode-aware Case Folding: 'false'
+        Enable Unicode Predefined Character Classes: 'false'
+        Enable Unix Lines Mode: 'false'
+        Include Capture Group 0: 'true'
+        extract-text-enable-repeating-capture-group: 'false'
+        filename: (.*)
+      descriptors:
+        Character Set:
+          name: Character Set
+          displayName: Character Set
+          description: The Character Set in which the file is encoded
+          defaultValue: UTF-8
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Maximum Buffer Size:
+          name: Maximum Buffer Size
+          displayName: Maximum Buffer Size
+          description: Specifies the maximum amount of data to buffer (per file) in order to apply the regular expressions.  Files larger than the specified maximum will not be fully evaluated.
+          defaultValue: 1 MB
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Maximum Capture Group Length:
+          name: Maximum Capture Group Length
+          displayName: Maximum Capture Group Length
+          description: Specifies the maximum number of characters a given capture group value can have.  Any characters beyond the max will be truncated.
+          defaultValue: '1024'
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Enable Canonical Equivalence:
+          name: Enable Canonical Equivalence
+          displayName: Enable Canonical Equivalence
+          description: Indicates that two characters match only when their full canonical decompositions match.
+          defaultValue: 'false'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Enable Case-insensitive Matching:
+          name: Enable Case-insensitive Matching
+          displayName: Enable Case-insensitive Matching
+          description: Indicates that two characters match even if they are in a different case.  Can also be specified via the embedded flag (?i).
+          defaultValue: 'false'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Permit Whitespace and Comments in Pattern:
+          name: Permit Whitespace and Comments in Pattern
+          displayName: Permit Whitespace and Comments in Pattern
+          description: 'In this mode, whitespace is ignored, and embedded comments starting with # are ignored until the end of a line.  Can also be specified via the embedded flag (?x).'
+          defaultValue: 'false'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Enable DOTALL Mode:
+          name: Enable DOTALL Mode
+          displayName: Enable DOTALL Mode
+          description: Indicates that the expression '.' should match any character, including a line terminator.  Can also be specified via the embedded flag (?s).
+          defaultValue: 'false'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Enable Literal Parsing of the Pattern:
+          name: Enable Literal Parsing of the Pattern
+          displayName: Enable Literal Parsing of the Pattern
+          description: Indicates that Metacharacters and escape characters should be given no special meaning.
+          defaultValue: 'false'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Enable Multiline Mode:
+          name: Enable Multiline Mode
+          displayName: Enable Multiline Mode
+          description: Indicates that '^' and '$' should match just after and just before a line terminator or end of sequence, instead of only the beginning or end of the entire input.  Can also be specified via the embeded flag (?m).
+          defaultValue: 'false'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Enable Unicode-aware Case Folding:
+          name: Enable Unicode-aware Case Folding
+          displayName: Enable Unicode-aware Case Folding
+          description: When used with 'Enable Case-insensitive Matching', matches in a manner consistent with the Unicode Standard.  Can also be specified via the embedded flag (?u).
+          defaultValue: 'false'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Enable Unicode Predefined Character Classes:
+          name: Enable Unicode Predefined Character Classes
+          displayName: Enable Unicode Predefined Character Classes
+          description: 'Specifies conformance with the Unicode Technical Standard #18: Unicode Regular Expression Annex C: Compatibility Properties.  Can also be specified via the embedded flag (?U).'
+          defaultValue: 'false'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Enable Unix Lines Mode:
+          name: Enable Unix Lines Mode
+          displayName: Enable Unix Lines Mode
+          description: |-
+            Indicates that only the '
+            ' line terminator is recognized in the behavior of '.', '^', and '$'.  Can also be specified via the embedded flag (?d).
+          defaultValue: 'false'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Include Capture Group 0:
+          name: Include Capture Group 0
+          displayName: Include Capture Group 0
+          description: Indicates that Capture Group 0 should be included as an attribute. Capture Group 0 represents the entirety of the regular expression match, is typically not used, and could have considerable length.
+          defaultValue: 'true'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        extract-text-enable-repeating-capture-group:
+          name: extract-text-enable-repeating-capture-group
+          displayName: Enable repeating capture group
+          description: If set to true, every string matching the capture groups will be extracted. Otherwise, if the Regular Expression matches more than once, only the first match will be extracted.
+          defaultValue: 'false'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        filename:
+          name: filename
+          displayName: filename
+          description: ''
+          required: false
+          sensitive: false
+          dynamic: true
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+      schedulingPeriod: 0 sec
+      schedulingStrategy: TIMER_DRIVEN
+      executionNode: ALL
+      penaltyDuration: 30 sec
+      yieldDuration: 1 sec
+      bulletinLevel: WARN
+      runDurationMillis: 0
+      concurrentlySchedulableTaskCount: 1
+      comments: ''
+      lossTolerant: false
+      defaultConcurrentTasks:
+        TIMER_DRIVEN: '1'
+        EVENT_DRIVEN: '0'
+        CRON_DRIVEN: '1'
+      defaultSchedulingPeriod:
+        TIMER_DRIVEN: 0 sec
+        CRON_DRIVEN: '* * * * * ?'
+    validationStatus: VALID
+    extensionMissing: false
+  inputRequirement: INPUT_REQUIRED
+  status:
+    name: ExtractText
+    runStatus: Stopped
+    statsLastRefreshed: 07:27:05 UTC
+    aggregateSnapshot:
+      name: ExtractText
+      type: ExtractText
+      runStatus: Stopped
+      executionNode: ALL
+      bytesRead: 0
+      bytesWritten: 0
+      read: 0 bytes
+      written: 0 bytes
+      flowFilesIn: 0
+      bytesIn: 0
+      input: 0 (0 bytes)
+      flowFilesOut: 0
+      bytesOut: 0
+      output: 0 (0 bytes)
+      taskCount: 0
+      tasksDurationNanos: 0
+      tasks: '0'
+      tasksDuration: '00:00:00.000'
+      activeThreadCount: 0
+      terminatedThreadCount: 0
+  operatePermissions:
+    canRead: true
+    canWrite: true
+
+# create put file
+create_putFile:
+  revision:
+    version: 0
+  position:
+    x: -93.27605716603307
+    'y': 1769.2202336639164
+  permissions:
+    canRead: true
+    canWrite: true
+  bulletins: []
+  component:
+    position:
+      x: -93.27605716603307
+      'y': 1769.2202336639164
+    name: PutFile
+    type: org.apache.nifi.processors.standard.PutFile
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-standard-nar
+      version: 1.9.0
+    state: STOPPED
+    style: {}
+    relationships:
+      - name: failure
+        description: Files that could not be written to the output directory for some reason are transferred to this relationship
+        autoTerminate: false
+      - name: success
+        description: Files that have been successfully written to the output directory are transferred to this relationship
+        autoTerminate: false
+    supportsParallelProcessing: true
+    supportsEventDriven: true
+    supportsBatching: true
+    persistsState: false
+    restricted: true
+    deprecated: false
+    executionNodeRestricted: false
+    multipleVersionsAvailable: false
+    inputRequirement: INPUT_REQUIRED
+    config:
+      properties:
+        Directory: /tmp/uploaded_files
+        Conflict Resolution Strategy: fail
+        Create Missing Directories: 'true'
+        Maximum File Count: null
+        Last Modified Time: null
+        Permissions: null
+        Owner: null
+        Group: null
+      descriptors:
+        Directory:
+          name: Directory
+          displayName: Directory
+          description: The directory to which files should be written. You may use expression language such as /aa/bb/${path}
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry and FlowFile Attributes
+        Conflict Resolution Strategy:
+          name: Conflict Resolution Strategy
+          displayName: Conflict Resolution Strategy
+          description: Indicates what should happen when a file with the same name already exists in the output directory
+          defaultValue: fail
+          allowableValues:
+            - allowableValue:
+                displayName: replace
+                value: replace
+              canRead: true
+            - allowableValue:
+                displayName: ignore
+                value: ignore
+              canRead: true
+            - allowableValue:
+                displayName: fail
+                value: fail
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Create Missing Directories:
+          name: Create Missing Directories
+          displayName: Create Missing Directories
+          description: If true, then missing destination directories will be created. If false, flowfiles are penalized and sent to failure.
+          defaultValue: 'true'
+          allowableValues:
+            - allowableValue:
+                displayName: 'true'
+                value: 'true'
+              canRead: true
+            - allowableValue:
+                displayName: 'false'
+                value: 'false'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Maximum File Count:
+          name: Maximum File Count
+          displayName: Maximum File Count
+          description: Specifies the maximum number of files that can exist in the output directory
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Last Modified Time:
+          name: Last Modified Time
+          displayName: Last Modified Time
+          description: Sets the lastModifiedTime on the output file to the value of this attribute.  Format must be yyyy-MM-dd'T'HH:mm:ssZ.  You may also use expression language such as ${file.lastModifiedTime}.
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry and FlowFile Attributes
+        Permissions:
+          name: Permissions
+          displayName: Permissions
+          description: Sets the permissions on the output file to the value of this attribute.  Format must be either UNIX rwxrwxrwx with a - in place of denied permissions (e.g. rw-r--r--) or an octal number (e.g. 644).  You may also use expression language such as ${file.permissions}.
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry and FlowFile Attributes
+        Owner:
+          name: Owner
+          displayName: Owner
+          description: Sets the owner on the output file to the value of this attribute.  You may also use expression language such as ${file.owner}.
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry and FlowFile Attributes
+        Group:
+          name: Group
+          displayName: Group
+          description: Sets the group on the output file to the value of this attribute.  You may also use expression language such as ${file.group}.
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry and FlowFile Attributes
+      schedulingPeriod: 0 sec
+      schedulingStrategy: TIMER_DRIVEN
+      executionNode: ALL
+      penaltyDuration: 30 sec
+      yieldDuration: 1 sec
+      bulletinLevel: WARN
+      runDurationMillis: 0
+      concurrentlySchedulableTaskCount: 1
+      comments: ''
+      lossTolerant: false
+      defaultConcurrentTasks:
+        TIMER_DRIVEN: '1'
+        EVENT_DRIVEN: '0'
+        CRON_DRIVEN: '1'
+      defaultSchedulingPeriod:
+        TIMER_DRIVEN: 0 sec
+        CRON_DRIVEN: '* * * * * ?'
+    validationStatus: VALID
+    extensionMissing: false
+  inputRequirement: INPUT_REQUIRED
+  status:
+    name: PutFile
+    runStatus: Stopped
+    statsLastRefreshed: 07:28:56 UTC
+    aggregateSnapshot:
+      name: PutFile
+      type: PutFile
+      runStatus: Stopped
+      executionNode: ALL
+      bytesRead: 0
+      bytesWritten: 0
+      read: 0 bytes
+      written: 0 bytes
+      flowFilesIn: 0
+      bytesIn: 0
+      input: 0 (0 bytes)
+      flowFilesOut: 0
+      bytesOut: 0
+      output: 0 (0 bytes)
+      taskCount: 0
+      tasksDurationNanos: 0
+      tasks: '0'
+      tasksDuration: '00:00:00.000'
+      activeThreadCount: 0
+      terminatedThreadCount: 0
+  operatePermissions:
+    canRead: true
+    canWrite: true
+
+# create fetchS3Object
+
+create_fetchS3Object:
+  revision:
+    version: 0
+  position:
+    x: 615.3875952540109
+    'y': 1708.7276799529789
+  permissions:
+    canRead: true
+    canWrite: true
+  bulletins: []
+  component:
+    position:
+      x: 615.3875952540109
+      'y': 1708.7276799529789
+    name: FetchS3Object
+    type: org.apache.nifi.processors.aws.s3.FetchS3Object
+    bundle:
+      group: org.apache.nifi
+      artifact: nifi-aws-nar
+      version: 1.9.0
+    state: STOPPED
+    style: {}
+    relationships:
+      - name: failure
+        description: FlowFiles are routed to failure relationship
+        autoTerminate: false
+      - name: success
+        description: FlowFiles are routed to success relationship
+        autoTerminate: false
+    supportsParallelProcessing: true
+    supportsEventDriven: false
+    supportsBatching: true
+    persistsState: false
+    restricted: false
+    deprecated: false
+    executionNodeRestricted: false
+    multipleVersionsAvailable: false
+    inputRequirement: INPUT_REQUIRED
+    config:
+      properties:
+        Bucket: null
+        Object Key: ${filename}
+        Region: eu-central-1
+        Access Key: null
+        Secret Key: null
+        Credentials File: null
+        AWS Credentials Provider service: null
+        Communications Timeout: 30 secs
+        Version: null
+        SSL Context Service: null
+        Endpoint Override URL: null
+        Signer Override: Default Signature
+        proxy-configuration-service: null
+        Proxy Host: null
+        Proxy Host Port: null
+        proxy-user-name: null
+        proxy-user-password: null
+      descriptors:
+        Bucket:
+          name: Bucket
+          displayName: Bucket
+          description: ''
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry and FlowFile Attributes
+        Object Key:
+          name: Object Key
+          displayName: Object Key
+          description: ''
+          defaultValue: ${filename}
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry and FlowFile Attributes
+        Region:
+          name: Region
+          displayName: Region
+          description: ''
+          defaultValue: us-west-2
+          allowableValues:
+            - allowableValue:
+                displayName: AWS GovCloud (US)
+                value: us-gov-west-1
+                description: 'AWS Region Code : us-gov-west-1'
+              canRead: true
+            - allowableValue:
+                displayName: AWS GovCloud (US-East)
+                value: us-gov-east-1
+                description: 'AWS Region Code : us-gov-east-1'
+              canRead: true
+            - allowableValue:
+                displayName: US East (N. Virginia)
+                value: us-east-1
+                description: 'AWS Region Code : us-east-1'
+              canRead: true
+            - allowableValue:
+                displayName: US East (Ohio)
+                value: us-east-2
+                description: 'AWS Region Code : us-east-2'
+              canRead: true
+            - allowableValue:
+                displayName: US West (N. California)
+                value: us-west-1
+                description: 'AWS Region Code : us-west-1'
+              canRead: true
+            - allowableValue:
+                displayName: US West (Oregon)
+                value: us-west-2
+                description: 'AWS Region Code : us-west-2'
+              canRead: true
+            - allowableValue:
+                displayName: EU (Ireland)
+                value: eu-west-1
+                description: 'AWS Region Code : eu-west-1'
+              canRead: true
+            - allowableValue:
+                displayName: EU (London)
+                value: eu-west-2
+                description: 'AWS Region Code : eu-west-2'
+              canRead: true
+            - allowableValue:
+                displayName: EU (Paris)
+                value: eu-west-3
+                description: 'AWS Region Code : eu-west-3'
+              canRead: true
+            - allowableValue:
+                displayName: EU (Frankfurt)
+                value: eu-central-1
+                description: 'AWS Region Code : eu-central-1'
+              canRead: true
+            - allowableValue:
+                displayName: Asia Pacific (Mumbai)
+                value: ap-south-1
+                description: 'AWS Region Code : ap-south-1'
+              canRead: true
+            - allowableValue:
+                displayName: Asia Pacific (Singapore)
+                value: ap-southeast-1
+                description: 'AWS Region Code : ap-southeast-1'
+              canRead: true
+            - allowableValue:
+                displayName: Asia Pacific (Sydney)
+                value: ap-southeast-2
+                description: 'AWS Region Code : ap-southeast-2'
+              canRead: true
+            - allowableValue:
+                displayName: Asia Pacific (Tokyo)
+                value: ap-northeast-1
+                description: 'AWS Region Code : ap-northeast-1'
+              canRead: true
+            - allowableValue:
+                displayName: Asia Pacific (Seoul)
+                value: ap-northeast-2
+                description: 'AWS Region Code : ap-northeast-2'
+              canRead: true
+            - allowableValue:
+                displayName: South America (Sao Paulo)
+                value: sa-east-1
+                description: 'AWS Region Code : sa-east-1'
+              canRead: true
+            - allowableValue:
+                displayName: China (Beijing)
+                value: cn-north-1
+                description: 'AWS Region Code : cn-north-1'
+              canRead: true
+            - allowableValue:
+                displayName: China (Ningxia)
+                value: cn-northwest-1
+                description: 'AWS Region Code : cn-northwest-1'
+              canRead: true
+            - allowableValue:
+                displayName: Canada (Central)
+                value: ca-central-1
+                description: 'AWS Region Code : ca-central-1'
+              canRead: true
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Access Key:
+          name: Access Key
+          displayName: Access Key ID
+          description: ''
+          required: false
+          sensitive: true
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry Only
+        Secret Key:
+          name: Secret Key
+          displayName: Secret Access Key
+          description: ''
+          required: false
+          sensitive: true
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry Only
+        Credentials File:
+          name: Credentials File
+          displayName: Credentials File
+          description: Path to a file containing AWS access key and secret key in properties file format.
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        AWS Credentials Provider service:
+          name: AWS Credentials Provider service
+          displayName: AWS Credentials Provider service
+          description: The Controller Service that is used to obtain aws credentials provider
+          allowableValues: []
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+          identifiesControllerService: org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderService
+          identifiesControllerServiceBundle:
+            group: org.apache.nifi
+            artifact: nifi-aws-service-api-nar
+            version: 1.9.0
+        Communications Timeout:
+          name: Communications Timeout
+          displayName: Communications Timeout
+          description: ''
+          defaultValue: 30 secs
+          required: true
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        Version:
+          name: Version
+          displayName: Version
+          description: The Version of the Object to download
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry and FlowFile Attributes
+        SSL Context Service:
+          name: SSL Context Service
+          displayName: SSL Context Service
+          description: Specifies an optional SSL Context Service that, if provided, will be used to create connections
+          allowableValues: []
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+          identifiesControllerService: org.apache.nifi.ssl.SSLContextService
+          identifiesControllerServiceBundle:
+            group: org.apache.nifi
+            artifact: nifi-standard-services-api-nar
+            version: 1.9.0
+        Endpoint Override URL:
+          name: Endpoint Override URL
+          displayName: Endpoint Override URL
+          description: Endpoint URL to use instead of the AWS default including scheme, host, port, and path. The AWS libraries select an endpoint URL based on the AWS region, but this property overrides the selected endpoint URL, allowing use with other S3-compatible endpoints.
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry Only
+        Signer Override:
+          name: Signer Override
+          displayName: Signer Override
+          description: The AWS libraries use the default signer but this property allows you to specify a custom signer to support older S3-compatible services.
+          defaultValue: Default Signature
+          allowableValues:
+            - allowableValue:
+                displayName: Default Signature
+                value: Default Signature
+              canRead: true
+            - allowableValue:
+                displayName: Signature v4
+                value: AWSS3V4SignerType
+              canRead: true
+            - allowableValue:
+                displayName: Signature v2
+                value: S3SignerType
+              canRead: true
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+        proxy-configuration-service:
+          name: proxy-configuration-service
+          displayName: Proxy Configuration Service
+          description: 'Specifies the Proxy Configuration Controller Service to proxy network requests. If set, it supersedes proxy settings configured per component. Supported proxies: HTTP + AuthN'
+          allowableValues: []
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: false
+          expressionLanguageScope: Not Supported
+          identifiesControllerService: org.apache.nifi.proxy.ProxyConfigurationService
+          identifiesControllerServiceBundle:
+            group: org.apache.nifi
+            artifact: nifi-standard-services-api-nar
+            version: 1.9.0
+        Proxy Host:
+          name: Proxy Host
+          displayName: Proxy Host
+          description: Proxy host name or IP
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry Only
+        Proxy Host Port:
+          name: Proxy Host Port
+          displayName: Proxy Host Port
+          description: Proxy host port
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: Variable Registry Only
+        proxy-user-name:
+          name: proxy-user-name
+          displayName: Proxy Username
+          description: Proxy username
+          required: false
+          sensitive: false
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: true (undefined scope)
+        proxy-user-password:
+          name: proxy-user-password
+          displayName: Proxy Password
+          description: Proxy password
+          required: false
+          sensitive: true
+          dynamic: false
+          supportsEl: true
+          expressionLanguageScope: true (undefined scope)
+      schedulingPeriod: 0 sec
+      schedulingStrategy: TIMER_DRIVEN
+      executionNode: ALL
+      penaltyDuration: 30 sec
+      yieldDuration: 1 sec
+      bulletinLevel: WARN
+      runDurationMillis: 0
+      concurrentlySchedulableTaskCount: 1
+      comments: ''
+      lossTolerant: false
+      defaultConcurrentTasks:
+        TIMER_DRIVEN: '1'
+        EVENT_DRIVEN: '0'
+        CRON_DRIVEN: '1'
+      defaultSchedulingPeriod:
+        TIMER_DRIVEN: 0 sec
+        CRON_DRIVEN: '* * * * * ?'
+    validationErrors:
+      - '''Bucket'' is invalid because Bucket is required'
+    validationStatus: INVALID
+    extensionMissing: false
+  inputRequirement: INPUT_REQUIRED
+  status:
+    name: FetchS3Object
+    runStatus: Invalid
+    statsLastRefreshed: 07:30:31 UTC
+    aggregateSnapshot:
+      name: FetchS3Object
+      type: FetchS3Object
+      runStatus: Invalid
+      executionNode: ALL
+      bytesRead: 0
+      bytesWritten: 0
+      read: 0 bytes
+      written: 0 bytes
+      flowFilesIn: 0
+      bytesIn: 0
+      input: 0 (0 bytes)
+      flowFilesOut: 0
+      bytesOut: 0
+      output: 0 (0 bytes)
+      taskCount: 0
+      tasksDurationNanos: 0
+      tasks: '0'
+      tasksDuration: '00:00:00.000'
+      activeThreadCount: 0
+      terminatedThreadCount: 0
+  operatePermissions:
+    canRead: true
+    canWrite: true
+
+
+# create group connections
+create_groupConnection:
+  revision:
+    version: 0
+  permissions:
+    canRead: true
+    canWrite: true
+  component:
+    source:
+      id: 668325c6-3a08-3e76-43a0-78aa1d818412
+      type: OUTPUT_PORT
+      groupId: 57c7cfce-d894-3fc0-e2dc-c7b6901e65ef
+      running: false
+      comments: ''
+    destination:
+      id: 102614b7-1810-1b05-bb8f-7a5784430e05
+      type: PROCESSOR
+      groupId: 102614b3-1810-1b05-2c42-9c4798776b25
+      running: false
+      comments: ''
+
+
+# create input port
+create_inputPort:
+  revision:
+    version: 0
+  position:
+    x: -1897.5428591481868
+    'y': 1416.1365868953792
+  permissions:
+    canRead: true
+    canWrite: true
+  bulletins: []
+  component:
+    position:
+      x: -1897.5428591481868
+      'y': 1416.1365868953792
+    name: incoming file
+    comments: ''
+    state: STOPPED
+    type: INPUT_PORT
+    concurrentlySchedulableTaskCount: 1
+    validationErrors:
+      - '''Port ''incoming file'''' is invalid because Output connection for port ''incoming file'' is not defined.'
+  status:
+    name: incoming file
+    runStatus: Invalid
+    statsLastRefreshed: 08:05:25 UTC
+    aggregateSnapshot:
+      name: incoming file
+      activeThreadCount: 0
+      flowFilesIn: 0
+      bytesIn: 0
+      input: 0 (0 bytes)
+      flowFilesOut: 0
+      bytesOut: 0
+      output: 0 (0 bytes)
+      runStatus: Invalid
+  portType: INPUT_PORT
+  operatePermissions:
+    canRead: true
+    canWrite: true
